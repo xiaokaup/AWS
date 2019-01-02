@@ -12,7 +12,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "stop": "taskkill -F -IM node.exe" // stop program about node server
+    "stop": "taskkill -F -IM node.exe" 
   },
   "eslintConfig": {
     "extends": "react-app"
