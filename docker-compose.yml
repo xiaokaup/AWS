@@ -7,14 +7,14 @@ services:
       dockerfile: Dockerfile
     restart: always
     image: postgres:latest
-    privileged: true
+    # privileged: true
     ports:
       - 5432:5432
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     volumes:
-      - ./data:/var/lib/postgresal/data
+      - ./postgres/data:/var/lib/postgresal/data
 
   flask:
     container_name: flask
@@ -29,5 +29,10 @@ services:
       - FLASK_APP=./flask/src/app.py
       - FLASK_RUN_HOST=0.0.0.0
       - PYTHONPATH=/app
+    depends_on:
+      - postgres
+    # links:
+    #   - postgres
+
   redis:
     image: "redis:alpine"
