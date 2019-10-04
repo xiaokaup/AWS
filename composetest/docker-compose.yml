@@ -1,13 +1,16 @@
 version: '3'
 services:
-  web:
-    build: .
+  flask:
+    build:
+      context: ./flask
+      dockerfile: Dockerfile
     ports:
       - "5000:5000"
     volumes:
-      - .:/code
+      - ./flask/src:/app
     environment:
-      - FLASK_APP=./src/app.py
+      - FLASK_APP=./flask/src/app.py
       - FLASK_RUN_HOST=0.0.0.0
+      - PYTHONPATH=/app
   redis:
     image: "redis:alpine"
