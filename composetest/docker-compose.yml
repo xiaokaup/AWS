@@ -7,7 +7,7 @@ services:
     volumes:
       - .:/code
     environment:
-      - FLASK_APP=app.py
+      - FLASK_APP=./src/app.py
       - FLASK_RUN_HOST=0.0.0.0
   redis:
     image: "redis:alpine"
