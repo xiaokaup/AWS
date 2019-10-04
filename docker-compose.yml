@@ -14,7 +14,7 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     volumes:
-      - postgres_data_local:/var/lib/postgresal/data
+      - ./data:/var/lib/postgresal/data
 
   flask:
     container_name: flask
