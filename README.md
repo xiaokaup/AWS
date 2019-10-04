@@ -1,4 +1,3 @@
 # AWS
 
-Tutorial docker-compose
-https://blog.csdn.net/pushiqiang/article/details/78682323
+Tutorial docker-compose: https://docs.docker.com/compose/gettingstarted/
