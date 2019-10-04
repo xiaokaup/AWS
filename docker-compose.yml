@@ -1,6 +1,23 @@
 version: '3'
 services:
+  db:
+    container_name: postgres
+    build:
+      context: ./db
+      dockerfile: Dockerfile
+    restart: always
+    image: postgres:latest
+    privileged: true
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - postgres_data_local:/var/lib/postgresal/data
+
   flask:
+    container_name: flask
     build:
       context: ./flask
       dockerfile: Dockerfile
