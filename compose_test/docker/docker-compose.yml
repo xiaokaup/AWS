@@ -5,6 +5,6 @@ services:
     ports:
       - "5000:5000"
     volumes:
-      - ../src:/src
+      - $PWD/../src/:/src
   redis:
     image: "redis:3.0.7"
