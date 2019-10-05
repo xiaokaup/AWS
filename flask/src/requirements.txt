@@ -1,2 +1,5 @@
 flask
+flask-script
+flask-migrate
+flask_sqlalchemy
 redis

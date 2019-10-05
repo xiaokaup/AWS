@@ -31,8 +31,8 @@ services:
       - PYTHONPATH=/app
     depends_on:
       - postgres
-    # links:
-    #   - postgres
+    links:
+      - postgres
 
   redis:
     image: "redis:alpine"
