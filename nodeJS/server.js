@@ -1,16 +1,27 @@
 'use strict'
 
 const express = require('express');
+const bodyParse = require('body-parser');
+const db = require('./queries');
 
 // contants
 const PORT = 8080;
-const HOST = '0.0.0.0';
 
 // App
 const app = express();
-app.get('/', (req, res) => {
-	res.send('Hello world\n');
+
+app.use(
+	bodyParse.urlencoded({
+		extended: true,
+	})
+)
+app.get('/', (request, response) => {
+	response.json({info: 'Node.js, Express, and Postgres API'});
 });
 
-app.listen(PORT, HOST);
-console.log(`Running on http://${HOST}:${PORT}`);
+app.get('/users', db.getUsers);
+app.get('/users/:id', db.getUserById);
+
+app.listen(PORT, () => {
+	console.log(`App running on port ${PORT}`)
+});
