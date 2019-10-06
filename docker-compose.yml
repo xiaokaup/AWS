@@ -29,5 +29,12 @@ services:
       - FLASK_APP=./flask/src/app.py
       - FLASK_RUN_HOST=0.0.0.0
       - PYTHONPATH=/app
+
   redis:
     image: "redis:alpine"
+
+  nodejs:
+    container_name: nodeJS
+    build:
+      context: ./nodeJS
+      dockerfile: Dockerfile
