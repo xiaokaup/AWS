@@ -38,3 +38,5 @@ services:
     build:
       context: ./nodeJS
       dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
