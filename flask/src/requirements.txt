@@ -3,4 +3,4 @@ flask-script
 flask-migrate
 flask_sqlalchemy
 redis
-psycopg2-binary
+psycopg2
