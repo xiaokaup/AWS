@@ -14,7 +14,7 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     volumes:
-      - ./postgres/data:/var/lib/postgresal/data
+      - ./postgres/data:/var/lib/postgresql/data
 
   flask:
     container_name: flask
@@ -36,3 +36,15 @@ services:
 
   redis:
     image: "redis:alpine"
+
+  nodejs:
+    container_name: nodeJS
+    build:
+      context: ./nodeJS
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    links:
+      - postgres
