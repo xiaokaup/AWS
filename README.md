@@ -12,3 +12,6 @@ Setting up a RESTful API with Node.js and PostgreSQL: https://blog.logrocket.com
 
 problem of flask:  
 need to recreate_db then upgrade
+
+
+angular https://angular.cn/tutorial  
