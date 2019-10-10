@@ -55,10 +55,31 @@ echo '<br>';
 
 <!-- parameter -->
 <?php
-function myTest($x) {
-	echo $x;
-}
-myTest(5);
+// function myTest($x) {
+// 	echo $x;
+// }
+// myTest(5);
+?>
+
+<!-- echo and print -->
+<?php
+$txt1="学习 PHP";
+$txt2="RUNOOB.COM";
+$cars=array("Volvo","BMW","Toyota");
+ 
+echo $txt1;
+echo "<br>";
+echo "在 $txt2 学习 PHP";
+echo "<br>";
+echo "我车的品牌是 $cars[0]";
+echo "<br>";
+
+print "<br>";
+print $txt1;
+print "<br>";
+print "在 $txt2 学习 PHP ";
+print "<br>";
+print "我车的品牌是 $cars[0]";
 ?>
 
 </body>
