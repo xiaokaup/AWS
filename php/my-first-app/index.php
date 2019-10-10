@@ -63,23 +63,34 @@ echo '<br>';
 
 <!-- echo and print -->
 <?php
-$txt1="学习 PHP";
-$txt2="RUNOOB.COM";
-$cars=array("Volvo","BMW","Toyota");
+// $txt1="学习 PHP";
+// $txt2="RUNOOB.COM";
+// $cars=array("Volvo","BMW","Toyota");
  
-echo $txt1;
-echo "<br>";
-echo "在 $txt2 学习 PHP";
-echo "<br>";
-echo "我车的品牌是 $cars[0]";
-echo "<br>";
+// echo $txt1;
+// echo "<br>";
+// echo "在 $txt2 学习 PHP";
+// echo "<br>";
+// echo "我车的品牌是 $cars[0]";
+// echo "<br>";
 
-print "<br>";
-print $txt1;
-print "<br>";
-print "在 $txt2 学习 PHP ";
-print "<br>";
-print "我车的品牌是 $cars[0]";
+// print "<br>";
+// print $txt1;
+// print "<br>";
+// print "在 $txt2 学习 PHP ";
+// print "<br>";
+// print "我车的品牌是 $cars[0]";
+?>
+
+<!-- PHP EOF -->
+<?php
+$name="runoob";
+$a= <<<EOF
+    "abc"$name
+    "123"
+EOF;
+// 结束需要独立一行且前后不能空格
+echo $a;
 ?>
 
 </body>
