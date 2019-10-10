@@ -9,6 +9,7 @@ echo "Hello World!";
 echo '<br>';
 echo 'my-first-app';
 echo '<br>';
+echo '<br>';
 ?>
 
 <!-- global and local variables -->
@@ -40,16 +41,24 @@ echo '<br>';
 
 <!-- local static variable -->
 <?php
-function myTest() {
-	static $x=0;
-	echo $x;
-	$x++;
-	echo PHP_EOL;
-}
+// function myTest() {
+// 	static $x=0;
+// 	echo $x;
+// 	$x++;
+// 	echo PHP_EOL;
+// }
 
-myTest();
-myTest();
-myTest();
+// myTest();
+// myTest();
+// myTest();
+?>
+
+<!-- parameter -->
+<?php
+function myTest($x) {
+	echo $x;
+}
+myTest(5);
 ?>
 
 </body>
