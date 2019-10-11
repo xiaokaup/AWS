@@ -48,3 +48,11 @@ services:
       - postgres
     links:
       - postgres
+
+  angular:
+    container_name: angular
+    build:
+      context: ./angular-tour-of-heroes
+      dockerfile: Dockerfile
+    ports:
+      - "4200:4200"
