@@ -30,7 +30,8 @@ services:
       # - ./nginx/html:/usr/share/nginx/html
       - /var/log/nginx:/var/log/nginx
     ports:
-      - "80:80"
+      - 80:80
+      - 443:443
     environment:
       - NGINX_HOST=http://52.47.121.120
       - NGINX_PORT=80
@@ -41,7 +42,7 @@ services:
       context: ./flask
       dockerfile: Dockerfile
     ports:
-      - "5000:5000"
+      - 5000:5000
     volumes:
       - ./flask/src:/app
     environment:
@@ -62,7 +63,7 @@ services:
       context: ./nodeJS
       dockerfile: Dockerfile
     ports:
-      - "8080:8080"
+      - 8080:8080
     depends_on:
       - postgres
     links:
@@ -74,4 +75,4 @@ services:
       context: ./angular-tour-of-heroes
       dockerfile: Dockerfile
     ports:
-      - "4200:4200"
+      - 4200:4200
