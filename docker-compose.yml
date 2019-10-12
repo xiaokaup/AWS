@@ -16,6 +16,21 @@ services:
     volumes:
       - ./postgres/data:/var/lib/postgresql/data
 
+  nginx:
+    image: nginx:stable-alpine
+    restart: unless-stopped
+    network_mode: host
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/nginx/conf.d:/etc/nginx/conf.d
+      - ./nginx/html:/usr/share/nginx/html
+      - /var/log/nginx:/var/log/nginx
+    ports:
+      - "80:80"
+    environment:
+      - NGINX_HOST=http://52.47.121.120
+      - NGINX_PORT=80
+
   flask:
     container_name: flask
     build:
