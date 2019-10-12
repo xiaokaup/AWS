@@ -15,3 +15,9 @@ need to recreate_db then upgrade
 
 
 angular https://angular.cn/tutorial  
+
+
+nginx https://yeasy.gitbooks.io/docker_practice/appendix/repo/nginx.html  
+nginx configure https://juejin.im/post/5aa7704c6fb9a028bb18a993#heading-15  
+Docker with nginx https://www.jianshu.com/p/2057576bfc5a  
+
