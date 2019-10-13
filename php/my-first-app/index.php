@@ -12,6 +12,62 @@ echo '<br>';
 echo '<br>';
 ?>
 
+
+
+<!-- PHP EOF -->
+<?php
+// $name="runoob";
+// $a= <<<EOF
+//     "abc"$name
+//     "123"
+// EOF;
+// // 结束需要独立一行且前后不能空格
+// echo $a;
+?>
+
+<!-- echo and print -->
+<?php
+// $txt1="学习 PHP";
+// $txt2="RUNOOB.COM";
+// $cars=array("Volvo","BMW","Toyota");
+ 
+// echo $txt1;
+// echo "<br>";
+// echo "在 $txt2 学习 PHP";
+// echo "<br>";
+// echo "我车的品牌是 $cars[0]";
+// echo "<br>";
+
+// print "<br>";
+// print $txt1;
+// print "<br>";
+// print "在 $txt2 学习 PHP ";
+// print "<br>";
+// print "我车的品牌是 $cars[0]";
+?>
+
+<!-- parameter -->
+<?php
+// function myTest($x) {
+// 	echo $x;
+// }
+// myTest(5);
+?>
+
+<!-- local static variable -->
+<?php
+// function myTest() {
+// 	static $x=0;
+// 	echo $x;
+// 	$x++;
+// 	echo PHP_EOL;
+// }
+
+// myTest();
+// myTest();
+// myTest();
+?>
+
 <!-- global and local variables -->
 <?php
 // $x=5;
@@ -37,60 +93,6 @@ echo '<br>';
 // echo "x=$x";
 // echo "<br>";
 // echo "y=$y";
-?>
-
-<!-- local static variable -->
-<?php
-// function myTest() {
-// 	static $x=0;
-// 	echo $x;
-// 	$x++;
-// 	echo PHP_EOL;
-// }
-
-// myTest();
-// myTest();
-// myTest();
-?>
-
-<!-- parameter -->
-<?php
-// function myTest($x) {
-// 	echo $x;
-// }
-// myTest(5);
-?>
-
-<!-- echo and print -->
-<?php
-// $txt1="学习 PHP";
-// $txt2="RUNOOB.COM";
-// $cars=array("Volvo","BMW","Toyota");
- 
-// echo $txt1;
-// echo "<br>";
-// echo "在 $txt2 学习 PHP";
-// echo "<br>";
-// echo "我车的品牌是 $cars[0]";
-// echo "<br>";
-
-// print "<br>";
-// print $txt1;
-// print "<br>";
-// print "在 $txt2 学习 PHP ";
-// print "<br>";
-// print "我车的品牌是 $cars[0]";
-?>
-
-<!-- PHP EOF -->
-<?php
-$name="runoob";
-$a= <<<EOF
-    "abc"$name
-    "123"
-EOF;
-// 结束需要独立一行且前后不能空格
-echo $a;
 ?>
 
 </body>
