@@ -11,6 +11,29 @@ echo 'my-first-app';
 echo '<br><br>';
 ?>
 
+<!-- PHP while loop -->
+<?php
+// while loop
+$i=1;
+while($i<=5)
+{
+    echo "The number is " . $i . "<br>";
+    $i++;
+}
+echo '<br>';
+
+// do...while loop
+$i=1;
+do
+{
+    $i++;
+    echo "The number is " . $i . "<br>";
+}
+while ($i<=5);
+echo '<br>';
+?>
+
+<?php /*
 <!-- PHP super global variable -->
 <?php
 // $GLOBALS
@@ -63,6 +86,7 @@ echo "<br>";
 <?php 
 echo "Study " . $_GET['subject'] . " @ " . $_GET['web'];
 ?>
+*/?>
 
 
 <!-- PHP array sort -->
