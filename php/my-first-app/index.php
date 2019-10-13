@@ -8,55 +8,107 @@
 echo "Hello World!";
 echo '<br>';
 echo 'my-first-app';
-echo '<br>';
-echo '<br>';
+echo '<br><br>';
 ?>
+
+<!-- PHP super global variable -->
+<?php
+// $GLOBALS
+$x = 75; 
+$y = 25;
+ 
+function addition() 
+{ 
+    $GLOBALS['z'] = $GLOBALS['x'] + $GLOBALS['y']; 
+}
+ 
+addition(); 
+echo $z; 
+echo '<br><hr>';
+
+// $_SERVER
+echo $_SERVER['PHP_SELF'];
+echo '<br><br>';
+echo $_SERVER['SERVER_NAME'];
+echo '<br><br>';
+echo $_SERVER['HTTP_HOST'];
+echo '<br><br>';
+echo $_SERVER['HTTP_REFERER'];
+echo '<br><br>';
+echo $_SERVER['HTTP_USER_AGENT'];
+echo '<br><br>';
+echo $_SERVER['SCRIPT_NAME'];
+?>
+<hr>
+<!-- $_REQUEST -->
+<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+Name: <input type="text" name="fname">
+<input type="submit">
+</form>
+<?php
+echo '$_REQUEST:';
+$name_request = isset($_REQUEST['fname'])? $_REQUEST['fname'] : null; 
+echo $name_request;
+echo "<br>"; 
+?>
+<!-- $_POST -->
+<?php
+echo '$_POST:';
+$name_post = isset($_POST['fname'])? $_POST['fname'] : null; 
+echo $name_post; 
+echo "<br>"; 
+?>
+<!-- $_GET -->
+<a href="index.php?subject=PHP&web=runoob.com">$GET: </a>
+<?php 
+echo "Study " . $_GET['subject'] . " @ " . $_GET['web'];
+?>
+
 
 <!-- PHP array sort -->
 <?php
-// sort() - 对数组进行升序排列
-// rsort() - 对数组进行降序排列
-echo "sort() and rsort()";
-echo "<br>";
-$cars=array("Volvo","BMW","Toyota"); 
-sort($cars); 
-print_r($cars);
-echo "<br>";
-rsort($cars); 
-print_r($cars);
-echo "<br><br>";
-$numbers=array(4,6,2,22,11);
-sort($numbers);
-print_r($numbers);
-echo "<br>";
-rsort($numbers);
-print_r($numbers);
-echo "<br><br>";
+// // sort() - 对数组进行升序排列
+// // rsort() - 对数组进行降序排列
+// echo "sort() and rsort()";
+// echo "<br>";
+// $cars=array("Volvo","BMW","Toyota"); 
+// sort($cars); 
+// print_r($cars);
+// echo "<br>";
+// rsort($cars); 
+// print_r($cars);
+// echo "<br><br>";
+// $numbers=array(4,6,2,22,11);
+// sort($numbers);
+// print_r($numbers);
+// echo "<br>";
+// rsort($numbers);
+// print_r($numbers);
+// echo "<br><br>";
 
-// ksort() - 根据关联数组的键，对数组进行升序排列
-// krsort() - 根据关联数组的键，对数组进行降序排列
-echo "ksort() and krsort()";
-echo "<br>";
-$age=array("Peter"=>"35","Ben"=>"37","Joe"=>"43");
-ksort($age);
-print_r($age);
-echo "<br>";
-krsort($age);
-print_r($age);
-echo "<br><br>";
+// // ksort() - 根据关联数组的键，对数组进行升序排列
+// // krsort() - 根据关联数组的键，对数组进行降序排列
+// echo "ksort() and krsort()";
+// echo "<br>";
+// $age=array("Peter"=>"35","Ben"=>"37","Joe"=>"43");
+// ksort($age);
+// print_r($age);
+// echo "<br>";
+// krsort($age);
+// print_r($age);
+// echo "<br><br>";
 
-// asort() - 根据关联数组的值，对数组进行升序排列
-// arsort() - 根据关联数组的值，对数组进行降序排列
-echo "asort() and arsort()";
-echo "<br>";
-$age=array("Peter"=>"35","Ben"=>"37","Joe"=>"43");
-asort($age);
-print_r($age);
-echo "<br>";
-arsort($age);
-print_r($age);
-echo "<br><br>";
-
+// // asort() - 根据关联数组的值，对数组进行升序排列
+// // arsort() - 根据关联数组的值，对数组进行降序排列
+// echo "asort() and arsort()";
+// echo "<br>";
+// $age=array("Peter"=>"35","Ben"=>"37","Joe"=>"43");
+// asort($age);
+// print_r($age);
+// echo "<br>";
+// arsort($age);
+// print_r($age);
+// echo "<br><br>";
 ?>
 
 <!-- PHP array -->
