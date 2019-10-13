@@ -12,6 +12,65 @@ echo '<br>';
 echo '<br>';
 ?>
 
+<!-- PHP array -->
+<?php
+// 数值数组
+$cars=array("Volvo","BMW","Toyota");
+$arrlength=count($cars);
+ 
+for($x=0;$x<$arrlength;$x++)
+{
+    echo $cars[$x];
+    echo "<br>";
+}
+echo "<br>";
+
+// 关联数组
+$age=array("Peter"=>"35","Ben"=>"37","Joe"=>"43");
+ 
+foreach($age as $x=>$x_value)
+{
+    echo "Key=" . $x . ", Value=" . $x_value;
+    echo "<br>";
+}
+echo "<br>";
+
+// 多维数组
+$cars = array
+(
+    array("Volvo",100,96),
+    array("BMW",60,59),
+    array("Toyota",110,100)
+);
+print("<pre>"); // 格式化输出数组
+print_r($cars);
+print("</pre>");
+
+echo "<hr>";
+
+$sites = array
+(
+    "runoob"=>array
+    (
+        "菜鸟教程",
+        "http://www.runoob.com"
+    ),
+    "google"=>array
+    (
+        "Google 搜索",
+        "http://www.google.com"
+    ),
+    "taobao"=>array
+    (
+        "淘宝",
+        "http://www.taobao.com"
+    )
+);
+print("<pre>"); // 格式化输出数组
+print_r($sites);
+print("</pre>");
+?>
+
 <!-- PHP Switch -->
 <?php
 // $favcolor="red";
@@ -45,15 +104,15 @@ echo '<br>';
 
 <!-- PHP string -->
 <?php
-// php并置运算符
-$txt1="Hello world!";
-$txt2="What a nice day!";
-echo $txt1 . " " . $txt2;
-echo "<br><br>";
-echo strlen("Hello world!");
-echo "<br><br>";
-echo strpos("Hello world!", "world");
-echo "<br><br>";
+// // php并置运算符
+// $txt1="Hello world!";
+// $txt2="What a nice day!";
+// echo $txt1 . " " . $txt2;
+// echo "<br><br>";
+// echo strlen("Hello world!");
+// echo "<br><br>";
+// echo strpos("Hello world!", "world");
+// echo "<br><br>";
 ?>
 
 <!-- PHP constant -->
