@@ -11,26 +11,44 @@ echo 'my-first-app';
 echo '<br><br>';
 ?>
 
-<!-- PHP while loop -->
+<!-- PHP for loop -->
 <?php
-// while loop
-$i=1;
-while($i<=5)
+// for loop
+for ($i=1; $i<=5; $i++)
 {
     echo "The number is " . $i . "<br>";
-    $i++;
 }
 echo '<br>';
 
-// do...while loop
-$i=1;
-do
+// foreach loop
+$x=array("one","two","three");
+foreach ($x as $value)
 {
-    $i++;
-    echo "The number is " . $i . "<br>";
+    echo $value . "<br>";
 }
-while ($i<=5);
 echo '<br>';
+?>
+
+<!-- PHP while loop -->
+<?php
+// // while loop
+// $i=1;
+// while($i<=5)
+// {
+//     echo "The number is " . $i . "<br>";
+//     $i++;
+// }
+// echo '<br>';
+
+// // do...while loop
+// $i=1;
+// do
+// {
+//     $i++;
+//     echo "The number is " . $i . "<br>";
+// }
+// while ($i<=5);
+// echo '<br>';
 ?>
 
 <?php /*
