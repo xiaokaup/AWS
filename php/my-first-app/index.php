@@ -1,3 +1,7 @@
+<?php
+namespace MyProject;
+?>
+
 <!DOCTYPE html>
 <html>
 <body>
@@ -11,34 +15,93 @@ echo 'my-first-app';
 echo '<br><br>';
 ?>
 
+<!-- PHP magic constant -->
+<?php
+// 文件中的当前行号
+echo '这是第"' . __LINE__ . '"行<br>';
+// 文件的完整路径和文件名
+echo '该文件位于"' . __FILE__ . '"<br>';
+// 文件所在目录
+echo '该文件位于"' . __DIR__ . '"<br>';
+// 函数名称
+function test_function() {
+	echo '函数名为: ' . __FUNCTION__ . '<br>';
+}
+test_function();
+// 类的名称
+class test_class {
+	function _print() {
+		echo '类名为: ' . __CLASS__ . "<br>";
+		echo '函数名为: ' . __FUNCTION__ . "<br>";
+	}
+}
+$t = new test_class();
+$t->_print();
+echo "<br>";
+// Trait的名字
+class Base {
+	public function sayHello() {
+		echo 'Hello ';
+	}
+}
+
+trait SayWorld {
+	public function sayHello() {
+		parent::sayHello();
+		echo 'World!';
+	}
+}
+
+class MyHelloWorld extends Base {
+	use SayWorld;
+}
+$o = new MyHelloWorld();
+$o->sayHello();
+echo "<br><br>";
+// 类的方法名
+class test_class_2 {
+	function test_method() {
+		echo '函数名称为: ' . __METHOD__;
+	}
+}
+$test_class_2 = new test_class_2();
+$test_class_2->test_method();
+echo "<br><br>";
+?>
+<?php
+// 当前命名空间的名称
+// define namespace in the first line
+echo '命名空间为: "'. __NAMESPACE__ .'"';
+?>
+
 <!-- PHP function -->
 <?php
-// function
-function writeName() {
-	echo "Kai Jim Refsnes.<br>";
-}
-echo "My name is ";
-writeName();
-echo "<br>";
+// // function
+// function writeName() {
+// 	echo "Kai Jim Refsnes.<br>";
+// }
+// echo "My name is ";
+// writeName();
+// echo "<br>";
 
-// add parameter
-function writeName_parameter($fname) {
-	echo $fname . " Refsnes.<br>";
-}
-echo "My name is ";
-writeName_parameter("Kai Jim");
-echo "My sister's name is ";
-writeName_parameter("Hege");
-echo "My brother's name is ";
-writeName_parameter("Stale");
-echo "<br>";
+// // add parameter
+// function writeName_parameter($fname) {
+// 	echo $fname . " Refsnes.<br>";
+// }
+// echo "My name is ";
+// writeName_parameter("Kai Jim");
+// echo "My sister's name is ";
+// writeName_parameter("Hege");
+// echo "My brother's name is ";
+// writeName_parameter("Stale");
+// echo "<br>";
 
-// return value
-function add($x, $y) {
-	$total=$x+$y;
-	return $total;
-}
-echo "1 + 16 = " . add(1, 16);
+// // return value
+// function add($x, $y) {
+// 	$total=$x+$y;
+// 	return $total;
+// }
+// echo "1 + 16 = " . add(1, 16);
 ?>
 
 <!-- PHP for loop -->
