@@ -11,22 +11,52 @@ echo 'my-first-app';
 echo '<br><br>';
 ?>
 
+<!-- PHP function -->
+<?php
+// function
+function writeName() {
+	echo "Kai Jim Refsnes.<br>";
+}
+echo "My name is ";
+writeName();
+echo "<br>";
+
+// add parameter
+function writeName_parameter($fname) {
+	echo $fname . " Refsnes.<br>";
+}
+echo "My name is ";
+writeName_parameter("Kai Jim");
+echo "My sister's name is ";
+writeName_parameter("Hege");
+echo "My brother's name is ";
+writeName_parameter("Stale");
+echo "<br>";
+
+// return value
+function add($x, $y) {
+	$total=$x+$y;
+	return $total;
+}
+echo "1 + 16 = " . add(1, 16);
+?>
+
 <!-- PHP for loop -->
 <?php
-// for loop
-for ($i=1; $i<=5; $i++)
-{
-    echo "The number is " . $i . "<br>";
-}
-echo '<br>';
+// // for loop
+// for ($i=1; $i<=5; $i++)
+// {
+//     echo "The number is " . $i . "<br>";
+// }
+// echo '<br>';
 
-// foreach loop
-$x=array("one","two","three");
-foreach ($x as $value)
-{
-    echo $value . "<br>";
-}
-echo '<br>';
+// // foreach loop
+// $x=array("one","two","three");
+// foreach ($x as $value)
+// {
+//     echo $value . "<br>";
+// }
+// echo '<br>';
 ?>
 
 <!-- PHP while loop -->
