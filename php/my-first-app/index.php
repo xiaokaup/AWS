@@ -12,63 +12,110 @@ echo '<br>';
 echo '<br>';
 ?>
 
+<!-- PHP array sort -->
+<?php
+// sort() - 对数组进行升序排列
+// rsort() - 对数组进行降序排列
+echo "sort() and rsort()";
+echo "<br>";
+$cars=array("Volvo","BMW","Toyota"); 
+sort($cars); 
+print_r($cars);
+echo "<br>";
+rsort($cars); 
+print_r($cars);
+echo "<br><br>";
+$numbers=array(4,6,2,22,11);
+sort($numbers);
+print_r($numbers);
+echo "<br>";
+rsort($numbers);
+print_r($numbers);
+echo "<br><br>";
+
+// ksort() - 根据关联数组的键，对数组进行升序排列
+// krsort() - 根据关联数组的键，对数组进行降序排列
+echo "ksort() and krsort()";
+echo "<br>";
+$age=array("Peter"=>"35","Ben"=>"37","Joe"=>"43");
+ksort($age);
+print_r($age);
+echo "<br>";
+krsort($age);
+print_r($age);
+echo "<br><br>";
+
+// asort() - 根据关联数组的值，对数组进行升序排列
+// arsort() - 根据关联数组的值，对数组进行降序排列
+echo "asort() and arsort()";
+echo "<br>";
+$age=array("Peter"=>"35","Ben"=>"37","Joe"=>"43");
+asort($age);
+print_r($age);
+echo "<br>";
+arsort($age);
+print_r($age);
+echo "<br><br>";
+
+?>
+
 <!-- PHP array -->
 <?php
-// 数值数组
-$cars=array("Volvo","BMW","Toyota");
-$arrlength=count($cars);
+// // 数值数组
+// $cars=array("Volvo","BMW","Toyota");
+// $arrlength=count($cars);
  
-for($x=0;$x<$arrlength;$x++)
-{
-    echo $cars[$x];
-    echo "<br>";
-}
-echo "<br>";
+// for($x=0;$x<$arrlength;$x++)
+// {
+//     echo $cars[$x];
+//     echo "<br>";
+// }
+// echo "<br>";
 
-// 关联数组
-$age=array("Peter"=>"35","Ben"=>"37","Joe"=>"43");
+// // 关联数组
+// $age=array("Peter"=>"35","Ben"=>"37","Joe"=>"43");
  
-foreach($age as $x=>$x_value)
-{
-    echo "Key=" . $x . ", Value=" . $x_value;
-    echo "<br>";
-}
-echo "<br>";
+// foreach($age as $x=>$x_value)
+// {
+//     echo "Key=" . $x . ", Value=" . $x_value;
+//     echo "<br>";
+// }
+// echo "<br>";
 
-// 多维数组
-$cars = array
-(
-    array("Volvo",100,96),
-    array("BMW",60,59),
-    array("Toyota",110,100)
-);
-print("<pre>"); // 格式化输出数组
-print_r($cars);
-print("</pre>");
+// // 多维数组
+// $cars = array
+// (
+//     array("Volvo",100,96),
+//     array("BMW",60,59),
+//     array("Toyota",110,100)
+// );
+// print("<pre>"); // 格式化输出数组
+// print_r($cars);
+// print("</pre>");
 
-echo "<hr>";
+// echo "<hr>";
 
-$sites = array
-(
-    "runoob"=>array
-    (
-        "菜鸟教程",
-        "http://www.runoob.com"
-    ),
-    "google"=>array
-    (
-        "Google 搜索",
-        "http://www.google.com"
-    ),
-    "taobao"=>array
-    (
-        "淘宝",
-        "http://www.taobao.com"
-    )
-);
-print("<pre>"); // 格式化输出数组
-print_r($sites);
-print("</pre>");
+// $sites = array
+// (
+//     "runoob"=>array
+//     (
+//         "菜鸟教程",
+//         "http://www.runoob.com"
+//     ),
+//     "google"=>array
+//     (
+//         "Google 搜索",
+//         "http://www.google.com"
+//     ),
+//     "taobao"=>array
+//     (
+//         "淘宝",
+//         "http://www.taobao.com"
+//     )
+// );
+// print("<pre>"); // 格式化输出数组
+// print_r($sites);
+// print("</pre>");
 ?>
 
 <!-- PHP Switch -->
