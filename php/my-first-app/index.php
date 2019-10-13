@@ -14,21 +14,21 @@ echo '<br>';
 
 <!-- PHP Switch -->
 <?php
-$favcolor="red";
-switch($favcolor)
-{
-	case "red":
-			echo "你喜欢的颜色是红色！";
-			break;
-	case "blue":
-			echo "你喜欢的颜色是蓝色！";
-			break;
-	case "green":
-			echo "你喜欢的颜色是绿色！";
-			break;
-	default:
-			echo "你喜欢的颜色不是 红，蓝，或绿色！";
-}
+// $favcolor="red";
+// switch($favcolor)
+// {
+// 	case "red":
+// 			echo "你喜欢的颜色是红色！";
+// 			break;
+// 	case "blue":
+// 			echo "你喜欢的颜色是蓝色！";
+// 			break;
+// 	case "green":
+// 			echo "你喜欢的颜色是绿色！";
+// 			break;
+// 	default:
+// 			echo "你喜欢的颜色不是 红，蓝，或绿色！";
+// }
 ?>
 
 <!-- PHP if...Else -->
@@ -41,6 +41,19 @@ switch($favcolor)
 // } else {
 // 	echo "Have a good night!";
 // }
+?>
+
+<!-- PHP string -->
+<?php
+// php并置运算符
+$txt1="Hello world!";
+$txt2="What a nice day!";
+echo $txt1 . " " . $txt2;
+echo "<br><br>";
+echo strlen("Hello world!");
+echo "<br><br>";
+echo strpos("Hello world!", "world");
+echo "<br><br>";
 ?>
 
 <!-- PHP constant -->
