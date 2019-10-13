@@ -12,7 +12,26 @@ echo '<br>';
 echo '<br>';
 ?>
 
+<?php
+// 区分大小写的常量名
+define("GREETING", "欢迎访问 Runoob.com");
+echo GREETING;		// 输出 "欢迎访问 Runoob.com"
+echo '<br>';
+echo greeting;		// 输出 "greeting"
+echo '<br><br>';
 
+// 不区分大小写的常量名
+define("GREETING_2", "欢迎访问 Runoob.com 2", true);
+echo greeting_2;		// 输出 "欢迎访问 Runoob.com 2"
+echo '<br><br>';
+
+
+function myTest() {
+	echo GREETING;
+}
+
+myTest();		// 输出 "欢迎访问 Runoob.com"
+?>
 
 <!-- PHP EOF -->
 <?php
