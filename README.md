@@ -13,5 +13,14 @@ Setting up a RESTful API with Node.js and PostgreSQL: https://blog.logrocket.com
 problem of flask:  
 need to recreate_db then upgrade
 
+
+angular https://angular.cn/tutorial  
+
+
+nginx https://yeasy.gitbooks.io/docker_practice/appendix/repo/nginx.html  
+nginx configure https://juejin.im/post/5aa7704c6fb9a028bb18a993#heading-15  
+Docker with nginx https://www.jianshu.com/p/2057576bfc5a  
+
+
 php tutorial http://www.runoob.com/php/php-tutorial.html
 php laravel 5.8 https://learnku.com/docs/laravel/5.8
