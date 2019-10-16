@@ -23,6 +23,8 @@ angular https://angular.cn/tutorial
 nginx https://yeasy.gitbooks.io/docker_practice/appendix/repo/nginx.html  
 nginx configure https://juejin.im/post/5aa7704c6fb9a028bb18a993#heading-15  
 Docker with nginx https://www.jianshu.com/p/2057576bfc5a  
+nginx proxy_pass url 反向代理的坑  https://xuexb.github.io/learn-nginx/example/proxy_pass.html#url-%E5%8F%AA%E6%98%AF-host  
+nginx配置url重写 https://xuexb.com/post/nginx-url-rewrite.html#rewrite  
 
 
 php tutorial http://www.runoob.com/php/php-tutorial.html  
