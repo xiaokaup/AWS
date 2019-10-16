@@ -68,7 +68,7 @@ services:
   nodejs:
     container_name: nodejs
     build:
-      context: ./nodeJS
+      context: ./nodejs
       dockerfile: Dockerfile
     ports:
       - 8080:8080
