@@ -66,9 +66,9 @@ services:
     image: "redis:alpine"
 
   nodejs:
-    container_name: nodeJS
+    container_name: nodejs
     build:
-      context: ./nodeJS
+      context: ./nodejs
       dockerfile: Dockerfile
     ports:
       - 8080:8080
