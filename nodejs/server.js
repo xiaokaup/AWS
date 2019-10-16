@@ -9,7 +9,7 @@ const PORT = 8080;
 
 // App
 const app = express();
-url_prefix="/nodejs";
+const url_prefix="/nodejs";
 
 app.use(
 	bodyParse.urlencoded({
