@@ -8,6 +8,10 @@ import { MessageService } from './message.service';
 
 import { Hero } from './hero';
 
+const httpOptions = {
+  headers: new HttpHeaders({'Content-Type': 'application/json'})
+};
+
 @Injectable({
   providedIn: 'root'
 })
@@ -62,5 +66,11 @@ export class HeroService {
     );
   }
 
-  
+  /** PUT: update the hero on the server */
+  updateHero(hero: Hero): Observable<any> {
+    return this.http.put(this.heroesUrl, hero, httpOptions).pipe(
+      tap(_ => this.log(`updated hero id=${hero.id}`)),
+      catchError(this.handleError<any>(`udpateHero`))
+    );
+  }
 }
