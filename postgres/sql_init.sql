@@ -17,23 +17,3 @@ CREATE TABLE users (
 
 INSERT INTO users (name, email)
   VALUES ('Jerry', 'jerry@example.com'), ('George', 'george@example.com');
-
-
--- Create for angular app and nodejs
-CREATE TABLE heroes (
-	ID SERIAL PRIMARY KEY,
-	name VARCHAR(30)
-);
-
-INSERT INTO heroes (name) 
-  VALUES ('Jiean Yang'), 
-  ('Dr Nice'), 
-  ('Narco'), 
-  ('Bombasto'), 
-  ('Celeritas'),
-  ('Magneta'),
-  ('RubberMan'),
-  ('Dynama'),
-  ('DR IQ'),
-  ('Magma'),
-  ('Tornado');
