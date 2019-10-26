@@ -26,6 +26,10 @@ app.post(url_prefix + '/users', db.createUser);
 app.put(url_prefix + '/users/:id', db.updateUser);
 app.delete(url_prefix + '/users/:id', db.deleteUser);
 
+app.get(url_prefix + '/heroes', db.getHeroes);
+app.get(url_prefix + '/heroes/:id', db.getHeroesById);
+
+
 app.listen(PORT, () => {
 	console.log(`App running on port ${PORT}`)
 });
