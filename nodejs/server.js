@@ -28,6 +28,9 @@ app.delete(url_prefix + '/users/:id', db.deleteUser);
 
 app.get(url_prefix + '/heroes', db.getHeroes);
 app.get(url_prefix + '/heroes/:id', db.getHeroesById);
+app.post(url_prefix + '/heroes', db.createHero);
+app.put(url_prefix + '/heroes/:id', db.updateHero);
+app.delete(url_prefix + '/heroes/:id', db.deleteHero);
 
 
 app.listen(PORT, () => {
