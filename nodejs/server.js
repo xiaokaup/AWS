@@ -15,7 +15,8 @@ app.use(
 	bodyParse.urlencoded({
 		extended: true,
 	})
-)
+);
+app.use(bodyParse.json());
 app.get(url_prefix + '/', (request, response) => {
 	response.json({info: 'Node.js, Express, and Postgres API'});
 });
