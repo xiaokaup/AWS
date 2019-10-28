@@ -73,21 +73,21 @@ const getHeroesById = (request, response) => {
 }
 
 const createHero = (request, response) => {
-	const hero = JSON.parse(request.body);
+	const {name} = request.body;
 
-	pool.query('INSERT INTO heroes (name) VALUES ($1) RETURNING *', [hero.name], (error, results) => {
+	pool.query('INSERT INTO heroes (name) VALUES ($1) RETURNING *', [name], (error, results) => {
 		if (error) throw error;
-		response.status(201).send(`Hero added with ID: ${results.rows[0].id}`);
+		response.status(201).json({name, id: results.rows[0].id});
 	});
 }
 
 const updateHero = (request, response) => {
 	const id = parseInt(request.params.id);
-	const hero = JSON.parse(request.body);
+	const {name} = request.body;
 
 	pool.query(
 		'UPDATE heroes SET name = $1 WHERE id = $2',
-		[hero.name, id],
+		[name, id],
 		(error, results) => {
 			if (error) throw error;
 			response.status(200).send(`Hero modified with ID: ${id}`);
