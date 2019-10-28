@@ -17,7 +17,7 @@ const httpOptions = {
 })
 export class HeroService {
 
-  private heroesUrl = 'api/heroes'; // URL to web api
+  private heroesUrl = '/nodejs/heroes'; // URL to web api
 
   constructor(
     private http: HttpClient,
@@ -68,7 +68,9 @@ export class HeroService {
 
   /** PUT: update the hero on the server */
   updateHero(hero: Hero): Observable<any> {
-    return this.http.put(this.heroesUrl, hero, httpOptions).pipe(
+    let body = JSON.stringify(hero);
+
+    return this.http.put(`${this.heroesUrl}/${hero.id}`, body, httpOptions).pipe(
       tap(_ => this.log(`updated hero id=${hero.id}`)),
       catchError(this.handleError<any>(`udpateHero`))
     );
@@ -76,7 +78,9 @@ export class HeroService {
 
   /** POST: add a new hero to the server */
   addHero(hero: Hero): Observable<Hero> {
-    return this.http.post<Hero>(this.heroesUrl, hero, httpOptions).pipe(
+    let body = JSON.stringify(hero);
+
+    return this.http.post<Hero>(this.heroesUrl, body, httpOptions).pipe(
       tap((newHero: Hero) => this.log(`added hero w/ id=${newHero.id}`)),
       catchError(this.handleError<Hero>('addHero'))
     );

@@ -55,10 +55,64 @@ const deleteUser = (request, response) => {
 	});
 }
 
+// ===================================
+const getHeroes = (request, response) => {
+	pool.query('SELECT * FROM heroes ORDER BY id ASC', (error, results) => {
+		if (error) throw error;
+		response.status(200).json(results.rows);
+	});
+}
+
+const getHeroesById = (request, response) => {
+	const id = parseInt(request.params.id);
+
+	pool.query('SELECT * FROM heroes WHERE id = $1', [id], (error, results) => {
+		if (error) throw error;
+		response.status(200).json(results.rows[0]);
+	});
+}
+
+const createHero = (request, response) => {
+	const {name} = request.body;
+
+	pool.query('INSERT INTO heroes (name) VALUES ($1) RETURNING *', [name], (error, results) => {
+		if (error) throw error;
+		response.status(201).json({name, id: results.rows[0].id});
+	});
+}
+
+const updateHero = (request, response) => {
+	const id = parseInt(request.params.id);
+	const {name} = request.body;
+
+	pool.query(
+		'UPDATE heroes SET name = $1 WHERE id = $2',
+		[name, id],
+		(error, results) => {
+			if (error) throw error;
+			response.status(200).send(`Hero modified with ID: ${id}`);
+		}
+	);
+}
+
+const deleteHero = (request, resposne) => {
+	const id = parseInt(request.params.id);
+
+	pool.query('DELETE FROM heroes WHERE id = $1', [id], (error, results) => {
+		if (error) throw error;
+		resposne.status(200).send(`Hero deleted with ID: ${id}`);
+	});
+}
+
 module.exports = {
 	getUsers,
 	getUserById,
 	createUser,
 	updateUser,
-	deleteUser
+	deleteUser,
+	getHeroes,
+	getHeroesById,
+	createHero,
+	updateHero,
+	deleteHero
 }
