@@ -73,7 +73,7 @@ const getHeroesById = (request, response) => {
 }
 
 const createHero = (request, response) => {
-	const {name} = request.body;
+	const {name} = JSON.parse(request.body);
 
 	pool.query('INSERT INTO heroes (name) VALUES ($1) RETURNING *', [name], (error, results) => {
 		if (error) throw error;
@@ -83,7 +83,7 @@ const createHero = (request, response) => {
 
 const updateHero = (request, response) => {
 	const id = parseInt(request.params.id);
-	const {name} = request.body;
+	const {name} = JSON.parse(request.body);
 
 	pool.query(
 		'UPDATE heroes SET name = $1 WHERE id = $2',
