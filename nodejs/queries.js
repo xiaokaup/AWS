@@ -24,7 +24,7 @@ const getUserById = (request, response) => {
 }
 
 const createUser = (request, response) => {
-	const {name, email} = JSON.parse(request.body);
+	const {name, email} = request.body;
 
 	pool.query('INSERT INTO users (name, email) VALUES ($1, $2) RETURNING *', [name, email], (error, results) => {
 		if (error) throw error;
@@ -34,7 +34,7 @@ const createUser = (request, response) => {
 
 const updateUser = (request, response) => {
 	const id = parseInt(request.params.id);
-	const {name, email} = JSON.parse(request.body);
+	const {name, email} = request.body;
 
 	pool.query(
 		'UPDATE users SET name = $1, email = $2 WHERE id =$3',
@@ -73,7 +73,7 @@ const getHeroesById = (request, response) => {
 }
 
 const createHero = (request, response) => {
-	const {name} = request.body;
+	const {name} = JSON.parse(request.body);
 
 	pool.query('INSERT INTO heroes (name) VALUES ($1) RETURNING *', [name], (error, results) => {
 		if (error) throw error;
@@ -83,7 +83,7 @@ const createHero = (request, response) => {
 
 const updateHero = (request, response) => {
 	const id = parseInt(request.params.id);
-	const {name} = request.body;
+	const {name} = JSON.parse(request.body);
 
 	pool.query(
 		'UPDATE heroes SET name = $1 WHERE id = $2',
