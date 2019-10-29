@@ -1,7 +1,19 @@
-<h1>{{title}}</h1>
-<nav>
-	<a routerLink="/dashboard">Dashboard</a>
-	<a routerLink="/heroes" style="margin-left: 10px;">Heroes</a>
-</nav>
-<router-outlet></router-outlet>
-<app-messages></app-messages>
+<header>
+	<h1>{{title}}</h1>
+	<nav>
+		<a routerLink="/dashboard">Dashboard</a>
+		<a routerLink="/heroes" style="margin-left: 10px;">Heroes</a>
+	</nav>	
+</header>
+
+<div id="content">
+	<router-outlet></router-outlet>
+</div>
+<div id="messages">
+	<app-messages></app-messages>
+</div>
+
+
+<footer>
+	<h4>This's footer</h4>
+</footer>
