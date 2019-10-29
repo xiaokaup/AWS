@@ -12,6 +12,13 @@ import { MessagesComponent } from './component/messages/messages.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { HeroSearchComponent } from './component/hero-search/hero-search.component';
 
+/**
+  InMemoryDataService used in environment dev
+  to simulate a source of data 
+*/
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './mock/in-memory-data.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +32,16 @@ import { HeroSearchComponent } from './component/hero-search/hero-search.compone
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+
+    /**
+      The HttpClientInMemoryWebApiModule module intercepts HTTP requests 
+      and returns simulated server responses.  
+      Remove it when a real server is ready to receive requests. 
+    */
+    HttpClientInMemoryWebApiModule.forRoot( 
+      InMemoryDataService, { dataEncapsulation: false } 
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
