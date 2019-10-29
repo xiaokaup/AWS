@@ -16,10 +16,10 @@ import { PagePanelHeroesComponent } from './page/page-panel-heroes/page-panel-he
 /**
   InMemoryDataService used in environment dev
   to simulate a source of data 
-*/
+
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './mock/in-memory-data.service';
-
+*/
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,10 +40,11 @@ import { InMemoryDataService } from './mock/in-memory-data.service';
       The HttpClientInMemoryWebApiModule module intercepts HTTP requests 
       and returns simulated server responses.  
       Remove it when a real server is ready to receive requests. 
-    */
+      
     HttpClientInMemoryWebApiModule.forRoot( 
       InMemoryDataService, { dataEncapsulation: false } 
     )
+    */
   ],
   providers: [],
   bootstrap: [AppComponent]
