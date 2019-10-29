@@ -12,6 +12,7 @@ import { MessagesComponent } from './component/messages/messages.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { HeroSearchComponent } from './component/hero-search/hero-search.component';
 
+import { PagePanelHeroesComponent } from './page/page-panel-heroes/page-panel-heroes.component';
 /**
   InMemoryDataService used in environment dev
   to simulate a source of data 
@@ -26,7 +27,8 @@ import { InMemoryDataService } from './mock/in-memory-data.service';
     HeroDetailComponent,
     MessagesComponent,
     DashboardComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
+    PagePanelHeroesComponent
   ],
   imports: [
     BrowserModule,
