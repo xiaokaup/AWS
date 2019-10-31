@@ -4,9 +4,8 @@ import { catchError, map, tap } from 'rxjs/operators';
 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { MessageService } from './message.service';
-
-import { Hero } from './hero';
+import { Hero } from '../../model/hero';
+import { MessageService } from '../message/message.service';
 
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
