@@ -68,20 +68,24 @@ nav a:hover {
 #messages {
   transition: right 2s;
   background-color: #79d480;
-  padding: 5px;
+  padding: 10px;
   position: fixed;
   display: inline;
   width: 200px;
   right: -160px;
   z-index: 1;
+  max-height: 200px;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
+#messages::-webkit-scrollbar { width: 0 !important }
 
 #messages:hover {
   right: 0;
 }
 
 #content {
-  min-height: 240px;
+  min-height: 290px;
 }
 
 footer {
