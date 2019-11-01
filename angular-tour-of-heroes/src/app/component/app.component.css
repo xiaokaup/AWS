@@ -1,0 +1,101 @@
+/* AppComponent's private CSS styles */
+/*
+h1 {
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+h2 {
+  font-size: 2em;
+  margin-top: 0;
+  padding-top: 0;
+}
+nav a {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+}
+nav a:visited, a:link {
+  color: #334953;
+}
+nav a:hover {
+  color: #039be5;
+  background-color: #cfd8dc;
+}
+nav a.active {
+  color: #039be5;
+}
+*/
+
+header {
+  background-color: #8829d6;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+h1 {
+  color: white;
+}
+
+nav {
+  margin: 5px 0;
+  background-color: #79d480;
+  border-radius: 6px;
+  padding: 5px;
+}
+
+nav a {
+  display: inline;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5em;
+  color: #161717;
+}
+
+nav a:hover {
+  background-color: #161717;
+  color: #79d480;
+  border-radius: 3px;
+}
+
+#main {
+  margin: 2px 0;
+}
+
+#messages {
+  transition: right 2s;
+  background-color: #79d480;
+  padding: 10px;
+  position: fixed;
+  display: inline;
+  width: 200px;
+  right: -160px;
+  z-index: 1;
+  max-height: 200px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+#messages::-webkit-scrollbar { width: 0 !important }
+
+#messages:hover {
+  right: 0;
+}
+
+#content {
+  min-height: 290px;
+}
+
+footer {
+  background-color: #f05248;
+  margin-top: 10px;
+  padding: 3px;
+  border-radius: 6px;
+  color: white;
+}
+
+footer p {
+  text-align: center;
+}

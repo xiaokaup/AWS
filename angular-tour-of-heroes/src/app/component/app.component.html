@@ -1,0 +1,27 @@
+<header>
+	<h1>{{title}}</h1>
+</header>
+
+<nav>
+	<a routerLink="/dashboard">Dashboard</a>
+	<a routerLink="/heroes" style="margin-left: 10px;">Heroes</a>
+</nav>	
+
+<div id="main">
+	<div id="messages">
+		<app-messages></app-messages>
+	</div>
+	<div id="content">
+		<router-outlet></router-outlet>
+	</div>
+</div>
+
+
+<footer>
+	<dl>
+		<dt>Presentaion: this's a application based on angular 2</dt>
+		<dt>Version: 1.0.0</dt>
+		<dt>Author: Jiean YANG</dt>
+	</dl>
+	<p>&copy; 2019 angular2.com</p>
+</footer>

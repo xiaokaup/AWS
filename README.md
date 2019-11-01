@@ -22,7 +22,6 @@ angular https://angular.cn/tutorial
 react redux https://react-redux.js.org/introduction/basic-tutorial  
 Dockerrizing a React App https://mherman.org/blog/dockerizing-a-react-app/  
 
-
 nginx https://yeasy.gitbooks.io/docker_practice/appendix/repo/nginx.html  
 nginx configure https://juejin.im/post/5aa7704c6fb9a028bb18a993#heading-15  
 Docker with nginx https://www.jianshu.com/p/2057576bfc5a  
