@@ -41,7 +41,7 @@ services:
     #   - react
     links:
       - angular
-      - flask
+      # - flask
       - nodejs
       - react
 
