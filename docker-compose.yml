@@ -84,3 +84,11 @@ services:
       dockerfile: Dockerfile
     ports:
       - 4200:4200
+
+  react:
+    container_name: react
+    build:
+      context: ./react
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
