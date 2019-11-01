@@ -1,0 +1,94 @@
+version: '3'
+services:
+  postgres:
+    container_name: postgres
+    build:
+      context: ./postgres
+      dockerfile: Dockerfile
+    restart: always
+    image: postgres:latest
+    # privileged: true
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./postgres/data:/var/lib/postgresql/data
+
+  nginx:
+    container_name: nginx
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    # volumes:
+      # - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      # - ./nginx/conf.d:/etc/nginx/conf.d
+      # - ./nginx/nginx.conf:/etc/nginx/conf.d
+      # - ./nginx/html:/usr/share/nginx/html
+      # - /var/log/nginx:/var/log/nginx
+    ports:
+      - 80:80
+      - 443:443
+    environment:
+      - NGINX_HOST=http://52.47.121.120
+      - NGINX_PORT=80
+    depends_on:
+      - angular
+      - flask
+      - nodejs
+    links:
+      - angular
+      - flask
+      - nodejs
+
+
+  flask:
+    container_name: flask
+    build:
+      context: ./flask
+      dockerfile: Dockerfile
+    ports:
+      - 5000:5000
+    volumes:
+      - ./flask/src:/app
+    environment:
+      - FLASK_APP=./flask/src/app.py
+      - FLASK_RUN_HOST=0.0.0.0
+      - PYTHONPATH=/app
+    depends_on:
+      - postgres
+    links:
+      - postgres
+
+  redis:
+    image: "redis:alpine"
+
+  nodejs:
+    container_name: nodejs
+    build:
+      context: ./nodejs
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    depends_on:
+      - postgres
+    links:
+      - postgres
+
+  angular:
+    container_name: angular
+    build:
+      context: ./angular-tour-of-heroes
+      dockerfile: Dockerfile
+    ports:
+      - 4200:4200
+
+  react:
+    container_name: react
+    build:
+      context:./react
+      dockerfile: Dockerfile
+    posts:
+      - 3000:3000
