@@ -43,7 +43,6 @@ services:
       - flask
       - nodejs
 
-
   flask:
     container_name: flask
     build:
@@ -88,7 +87,7 @@ services:
   react:
     container_name: react
     build:
-      context:./react
+      context: ./react
       dockerfile: Dockerfile
-    posts:
+    ports:
       - 3000:3000
