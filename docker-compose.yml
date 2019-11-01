@@ -38,10 +38,12 @@ services:
       - angular
       - flask
       - nodejs
+      - react
     links:
       - angular
       - flask
       - nodejs
+      - react
 
   flask:
     container_name: flask
@@ -83,6 +85,10 @@ services:
       dockerfile: Dockerfile
     ports:
       - 4200:4200
+    depends_on:
+      - postgres
+    links:
+      - postgres
 
   react:
     container_name: react
