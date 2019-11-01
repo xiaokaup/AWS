@@ -1,20 +1,5 @@
 version: '3'
 services:
-  postgres:
-    container_name: postgres
-    build:
-      context: ./postgres
-      dockerfile: Dockerfile
-    restart: always
-    image: postgres:latest
-    # privileged: true
-    ports:
-      - 5432:5432
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-    volumes:
-      - ./postgres/data:/var/lib/postgresql/data
 
   nginx:
     container_name: nginx
@@ -37,13 +22,60 @@ services:
     depends_on:
       - angular
       # - flask
-      - nodejs
-      - react
+      # - react
     links:
       - angular
       # - flask
+      # - react
+
+  react:
+    container_name: react
+    build:
+      context: ./react
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+
+  angular:
+    container_name: angular
+    build:
+      context: ./angular-tour-of-heroes
+      dockerfile: Dockerfile
+    ports:
+      - 4200:4200
+    depends_on:
       - nodejs
-      - react
+    links:
+      - nodejs
+
+  nodejs:
+    container_name: nodejs
+    build:
+      context: ./nodejs
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    depends_on:
+      - postgres
+    links:
+      - postgres
+
+  postgres:
+    container_name: postgres
+    build:
+      context: ./postgres
+      dockerfile: Dockerfile
+    restart: always
+    image: postgres:latest
+    # privileged: true
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./postgres/data:/var/lib/postgresql/data
+
 
   flask:
     container_name: flask
@@ -65,37 +97,3 @@ services:
 
   redis:
     image: "redis:alpine"
-
-  nodejs:
-    container_name: nodejs
-    build:
-      context: ./nodejs
-      dockerfile: Dockerfile
-    ports:
-      - 8080:8080
-    depends_on:
-      - postgres
-    links:
-      - postgres
-
-  angular:
-    container_name: angular
-    build:
-      context: ./angular-tour-of-heroes
-      dockerfile: Dockerfile
-    ports:
-      - 4200:4200
-    depends_on:
-      - postgres
-      - nodejs
-    links:
-      - postgres
-      - nodejs
-
-  react:
-    container_name: react
-    build:
-      context: ./react
-      dockerfile: Dockerfile
-    ports:
-      - 3000:3000
