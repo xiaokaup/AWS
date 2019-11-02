@@ -1,18 +1,17 @@
 import React from 'react'
 import Header from './pages/Common/Header'
+import NavBar from './pages/Common/NavBar'
 import Footer from './pages/Common/Footer'
-import HomePage from './pages/HomePage'
+import HomePage from './pages/HomePage/HomePage'
+import './App.css'
 
 
 const App = () => (
 	<div>
 		<Header />
 
-		{/*<nav>
-			<a routerLink="/dashboard">Dashboard</a>
-			<a routerLink="/heroes">Heroes</a>
-		</nav>	*/}
-		
+		<NavBar />
+
 		<HomePage />
 
 		<Footer />
