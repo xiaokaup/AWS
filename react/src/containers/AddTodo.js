@@ -7,18 +7,14 @@ const AddTodo = ({ dispatch }) => {
 
   const submitForm = e => {
     e.preventDefault();
-    if (!input.value.trim()) {
-      return;
-    }
+    if (!input.value.trim()) { return; }
     dispatch(addTodo(input.value));
     input.value = '';
   };
 
   return (
     <div>
-      <form
-        onSubmit={submitForm}
-      >
+      <form onSubmit={submitForm}>
         <input ref={node => (input = node)} />
         <button type="submit">Add Todo</button>
       </form>
