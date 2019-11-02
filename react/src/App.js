@@ -1,13 +1,21 @@
 import React from 'react'
-import FilterTodoView from './components/FilterTodo/FilterTodoView'
-import AddTodoView from './components/AddTodo/AddTodoView'
-import VisibleTodoListContainer from './components/VisibleTodoList/VisibleTodoListContainer'
+import Header from './pages/Common/Header'
+import Footer from './pages/Common/Footer'
+import HomePage from './pages/HomePage'
+
 
 const App = () => (
 	<div>
-		<FilterTodoView />
-		<AddTodoView />
-		<VisibleTodoListContainer />
+		<Header />
+
+		{/*<nav>
+			<a routerLink="/dashboard">Dashboard</a>
+			<a routerLink="/heroes">Heroes</a>
+		</nav>	*/}
+		
+		<HomePage />
+
+		<Footer />
 	</div>
 )
 
