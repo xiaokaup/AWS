@@ -1,13 +1,13 @@
 import React from 'react'
 import FilterTodoView from '../components/FilterTodo/FilterTodoView'
-import AddTodo from '../containers/AddTodo'
-import VisibleTodoList from '../containers/VisibleTodoList'
+import AddTodoView from '../components/AddTodo/AddTodoView'
+import VisibleTodoListContainer from '../components/VisibleTodoList/VisibleTodoListContainer'
 
 const App = () => (
 	<div>
 		<FilterTodoView />
-		<AddTodo />
-		<VisibleTodoList />
+		<AddTodoView />
+		<VisibleTodoListContainer />
 	</div>
 )
 
