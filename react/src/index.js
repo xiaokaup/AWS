@@ -4,12 +4,17 @@ import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import rootReducer from './reducers'
 import App from './App'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { createBrowserHistory } from "history"
 
 const store = createStore(rootReducer)
+const history = createBrowserHistory()
 
 render(
   <Provider store={store}>
-    <App />
+  	<Router history={history}>
+  		<Route exact path="/" component={App} />
+  	</Router>
   </Provider>,
   document.getElementById('root')
 )
