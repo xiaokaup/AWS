@@ -3,8 +3,8 @@ import './NavBar.css'
 
 const NavBar = () => (
 	<nav>
-		<a>Dashboard</a>
-		<a>Heroes</a>
+		<a href="/">home</a>
+		<a href="/app">app</a>
 	</nav>
 )
 

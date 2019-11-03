@@ -2,20 +2,24 @@ import React from 'react'
 import Header from './pages/Common/Header'
 import NavBar from './pages/Common/NavBar'
 import Footer from './pages/Common/Footer'
-import HomePage from './pages/HomePage/HomePage'
+import { Route } from 'react-router-dom'
 import './App.css'
 
-
-const App = () => (
-	<div>
+const AppSinglePageRoute = ({ component: Component, ...rest }) => (
+<Route
+  {...rest}
+  render={routeProps => (
+  	<div>
 		<Header />
 
 		<NavBar />
 
-		<HomePage />
+		<Component {...routeProps} />
 
 		<Footer />
 	</div>
+  )}
+/>
 )
 
-export default App
+export default AppSinglePageRoute
