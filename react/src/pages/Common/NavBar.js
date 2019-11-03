@@ -3,8 +3,8 @@ import './NavBar.css'
 
 const NavBar = () => (
 	<nav>
-		<a routerLink="/dashboard">Dashboard</a>
-		<a routerLink="/heroes">Heroes</a>
+		<a href="/">home</a>
+		<a href="/app">app</a>
 	</nav>
 )
 
