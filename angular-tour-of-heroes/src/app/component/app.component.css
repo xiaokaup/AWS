@@ -35,6 +35,7 @@ header {
   left: 2px;
   right: 2px;
   height: 100px;
+
   background-color: #8829d6;
   padding: 10px;
   border-radius: 6px;
@@ -75,10 +76,12 @@ nav a:hover {
   top: 165px;
   left: 2px;
   right: 2px;
-  bottom: 128px;
-  /*margin: 2px 0;*/
+  bottom: 100px;
+
   padding: 0 10px;
+  overflow: auto;
 }
+#main::-webkit-scrollbar { width: 0 !important }
 
 #messages {
   transition: right 2s;
@@ -99,9 +102,7 @@ nav a:hover {
   right: 0;
 }
 
-/*#content {
-  min-height: 290px;
-}*/
+#content {}
 
 footer {
   position: absolute;
@@ -109,8 +110,8 @@ footer {
   right: 2px;
   bottom: 2px;
   height: 100px;
+
   background-color: #f05248;
-  margin-top: 10px;
   padding: 3px;
   border-radius: 6px;
   color: white;
