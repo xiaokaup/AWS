@@ -30,6 +30,12 @@ nav a.active {
 */
 
 header {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  height: 100px;
+
   background-color: #8829d6;
   padding: 10px;
   border-radius: 6px;
@@ -40,7 +46,11 @@ h1 {
 }
 
 nav {
-  margin: 5px 0;
+  position: absolute;
+  top: 125px;
+  left: 2px;
+  right: 2px;
+/*  margin: 5px 0;*/
   background-color: #79d480;
   border-radius: 6px;
   padding: 5px;
@@ -62,8 +72,16 @@ nav a:hover {
 }
 
 #main {
-  margin: 2px 0;
+  position: absolute;
+  top: 165px;
+  left: 2px;
+  right: 2px;
+  bottom: 100px;
+
+  padding: 0 10px;
+  overflow: auto;
 }
+#main::-webkit-scrollbar { width: 0 !important }
 
 #messages {
   transition: right 2s;
@@ -75,7 +93,7 @@ nav a:hover {
   right: -160px;
   z-index: 1;
   max-height: 200px;
-  overflow-x: hidden;
+  overflow-x: scroll;
   overflow-y: scroll;
 }
 #messages::-webkit-scrollbar { width: 0 !important }
@@ -84,13 +102,16 @@ nav a:hover {
   right: 0;
 }
 
-#content {
-  min-height: 290px;
-}
+#content {}
 
 footer {
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  height: 100px;
+
   background-color: #f05248;
-  margin-top: 10px;
   padding: 3px;
   border-radius: 6px;
   color: white;
