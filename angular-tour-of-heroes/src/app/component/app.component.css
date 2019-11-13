@@ -79,9 +79,7 @@ nav a:hover {
   bottom: 100px;
 
   padding: 0 10px;
-  overflow: auto;
 }
-#main::-webkit-scrollbar { width: 0 !important }
 
 #messages {
   transition: right 2s;
