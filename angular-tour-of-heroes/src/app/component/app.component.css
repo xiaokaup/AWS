@@ -30,11 +30,12 @@ nav a.active {
 */
 
 header {
-  position: absolute;
+ /* position: absolute;
   top: 2px;
   left: 2px;
   right: 2px;
-  height: 100px;
+  height: 100px;*/
+  margin: 2px;
 
   background-color: #8829d6;
   padding: 10px;
@@ -46,11 +47,12 @@ h1 {
 }
 
 nav {
-  position: absolute;
+  /*position: absolute;
   top: 125px;
   left: 2px;
-  right: 2px;
-/*  margin: 5px 0;*/
+  right: 2px;*/
+  margin: 0 2px 2px 2px;
+
   background-color: #79d480;
   border-radius: 6px;
   padding: 5px;
@@ -72,12 +74,14 @@ nav a:hover {
 }
 
 #main {
-  position: absolute;
+  /*position: absolute;
   top: 165px;
   left: 2px;
   right: 2px;
-  bottom: 100px;
+  bottom: 100px;*/
+  margin: 0;
 
+  min-height: 316px;
   padding: 0 10px;
 }
 
@@ -103,11 +107,13 @@ nav a:hover {
 #content {}
 
 footer {
-  position: absolute;
+  /*position: absolute;
   left: 2px;
   right: 2px;
   bottom: 2px;
   height: 100px;
+*/
+  margin: 2px;
 
   background-color: #f05248;
   padding: 3px;
