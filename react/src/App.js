@@ -1,11 +1,11 @@
 
 import React, { Fragment } from 'react'
-import Header from './pages/Common/Header'
-import NavBar from './pages/Common/NavBar'
-import Footer from './pages/Common/Footer'
+import Header from './1_pages/Common/Header'
+import NavBar from './1_pages/Common/NavBar'
+import Footer from './1_pages/Common/Footer'
 import { Route } from 'react-router-dom'
-import ReduxApp from './pages/ReduxApp/ReduxApp'
-import HomePage from './pages/HomePage/HomePage'
+import ReduxApp from './1_pages/ReduxApp/ReduxApp'
+import HomePage from './1_pages/HomePage/HomePage'
 import './App.css'
 
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import FilterTodoContainer from './FilterTodoContainer'
-import { VisibilityFilters } from '../../actions'
+import { VisibilityFilters } from '../../0_actions'
 
 const FilterTodoView = () => (
 	<div id='footer'>
