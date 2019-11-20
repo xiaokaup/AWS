@@ -2,9 +2,9 @@ import React, { Fragment } from 'react'
 import FilterTodoView from '../../components/FilterTodo/FilterTodoView'
 import AddTodoView from '../../components/AddTodo/AddTodoView'
 import VisibleTodoListContainer from '../../components/VisibleTodoList/VisibleTodoListContainer'
-import './HomePage.css'
+import './ReduxApp.css'
 
-const HomePage = () => (
+const ReduxApp = () => (
 	<Fragment>
 		<div id="messages">
 			{/*<app-messages></app-messages>*/}
@@ -18,4 +18,4 @@ const HomePage = () => (
 	</Fragment>
 )
 
-export default HomePage
+export default ReduxApp
