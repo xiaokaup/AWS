@@ -1,4 +1,7 @@
-#main {
+#main h1 {
+  color: black;
+}
+/*#main {
   margin: 2px 0;
 }
 
@@ -23,4 +26,4 @@
 
 #content {
   min-height: 290px;
-}
+}*/

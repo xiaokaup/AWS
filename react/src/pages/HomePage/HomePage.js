@@ -11,9 +11,7 @@ const HomePage = () => (
 		</div>
 		<div id="content">
 			{/*<router-outlet></router-outlet>*/}
-			<FilterTodoView />
-			<AddTodoView />
-			<VisibleTodoListContainer />
+			<h1>My app</h1>
 		</div>
 	</Fragment>
 )
