@@ -1,23 +1,23 @@
 import React, { Fragment } from 'react'
-import './HomePage.css'
+import './Dashboard.css'
 import { Cards } from '../../3_elements/Cards'
 
 
-class HomePage extends React.Component  {
+class Dashboard extends React.Component  {
 	constructor(props) {
 		super(props)
-		this.state = {cards: [{id:1, name:"a"}, {id:2, name:"b"}, {id:3, name:"c"}, {id:4, name:"d"}]}
+		this.state = {cards: []}
 	}
 
-	// componentDidMount() {
-	// 	fetch("http://35.180.32.33/nodejs/heroes")
-	// 		.then(response => {
-	// 			return response.json();
-	// 		})
-	// 		.then(heroes => {
-	// 			console.log(heroes);
-	// 		})
-	// }
+	componentDidMount() {
+		fetch("http://35.180.32.33/nodejs/heroes")
+			.then(response => {
+				return response.json();
+			})
+			.then(heroes => {
+				this.setState({cards: heroes.slice(0,4)});
+			})
+	}
 
 	render() {
 		return (
@@ -28,9 +28,14 @@ class HomePage extends React.Component  {
 				<div id="content">
 					{/*<router-outlet></router-outlet>*/}
 					<h3>Top Heroes</h3>
+
+					{
+					this.state.cards 
+					&&	
 					<div class="grid grid-pad">
 						<Cards cards={this.state.cards} />
 					</div>
+					}
 
 					{/*<app-hero-search></app-hero-search>*/}
 				</div>
@@ -39,4 +44,4 @@ class HomePage extends React.Component  {
 	}
 }
 
-export default HomePage
+export default Dashboard
