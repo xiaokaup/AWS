@@ -21,9 +21,6 @@ class Heroes extends React.Component  {
 
 
 	render() {
-		const style_content_box = {
-			boxSizing: "content-box"
-		}
 		return (
 			<Fragment>
 				<div id="messages">
@@ -31,10 +28,6 @@ class Heroes extends React.Component  {
 				</div>
 				<div id="content">
 					<h2>My Heroes</h2>
-					
-					<Lists ul_class="heroes" style={style_content_box} lists={this.state.lists} />
-					
-
 					<div>
 						<label>Hero name:
 							<input type="text" />
@@ -43,6 +36,9 @@ class Heroes extends React.Component  {
 							add
 						</button>
 					</div>
+					
+					<Lists ul_class="heroes" specific_style={null} lists={this.state.lists} />
+				
 					{/*<app-hero-search></app-hero-search>*/}
 				</div>
 			</Fragment>
