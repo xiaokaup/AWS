@@ -57,6 +57,7 @@ const deleteUser = (request, response) => {
 
 // ===================================
 const getHeroes = (request, response) => {
+	response.setHeader('Access-Control-Allow-Origin', '*');
 	pool.query('SELECT * FROM heroes ORDER BY id ASC', (error, results) => {
 		if (error) throw error;
 		response.status(200).json(results.rows);
@@ -64,6 +65,7 @@ const getHeroes = (request, response) => {
 }
 
 const getHeroesById = (request, response) => {
+	response.setHeader('Access-Control-Allow-Origin', '*');
 	const id = parseInt(request.params.id);
 
 	pool.query('SELECT * FROM heroes WHERE id = $1', [id], (error, results) => {
@@ -73,6 +75,7 @@ const getHeroesById = (request, response) => {
 }
 
 const createHero = (request, response) => {
+	response.setHeader('Access-Control-Allow-Origin', '*');
 	const {name} = request.body;
 
 	pool.query('INSERT INTO heroes (name) VALUES ($1) RETURNING *', [name], (error, results) => {
@@ -82,6 +85,7 @@ const createHero = (request, response) => {
 }
 
 const updateHero = (request, response) => {
+	response.setHeader('Access-Control-Allow-Origin', '*');
 	const id = parseInt(request.params.id);
 	const {name} = request.body;
 
@@ -96,6 +100,7 @@ const updateHero = (request, response) => {
 }
 
 const deleteHero = (request, resposne) => {
+	response.setHeader('Access-Control-Allow-Origin', '*');
 	const id = parseInt(request.params.id);
 
 	pool.query('DELETE FROM heroes WHERE id = $1', [id], (error, results) => {
