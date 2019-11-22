@@ -7,7 +7,6 @@ import App from './App'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { createBrowserHistory } from "history"
 
-
 const store = createStore(rootReducer)
 const history = createBrowserHistory()
 
