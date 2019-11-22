@@ -7,6 +7,7 @@ import { Route } from 'react-router-dom'
 import ReduxApp from './1_pages/ReduxApp/ReduxApp'
 import Dashboard from './1_pages/Dashboard/Dashboard'
 import Heroes from './1_pages/Heroes/Heroes'
+import HeroDetail from './1_pages/HeroDetail/HeroDetail'
 import './App.css'
 
 
@@ -21,6 +22,7 @@ const App = ({ component: Component, ...rest }) => (
 	  			<Route path="/reduxApp" component={ReduxApp} />
 	  			<Route path="/Dashboard" component={Dashboard} />
 	  			<Route path="/heroes" component={Heroes} />
+	  			<Route path="/detail/:id" component={HeroDetail} />
 			</switch>
 		</div>
 	  	<Footer />
