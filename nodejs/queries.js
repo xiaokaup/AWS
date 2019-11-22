@@ -99,13 +99,13 @@ const updateHero = (request, response) => {
 	);
 }
 
-const deleteHero = (request, resposne) => {
+const deleteHero = (request, response) => {
 	response.setHeader('Access-Control-Allow-Origin', '*');
 	const id = parseInt(request.params.id);
 
 	pool.query('DELETE FROM heroes WHERE id = $1', [id], (error, results) => {
 		if (error) throw error;
-		resposne.status(200).send(`Hero deleted with ID: ${id}`);
+		response.status(200).send(`Hero deleted with ID: ${id}`);
 	});
 }
 
