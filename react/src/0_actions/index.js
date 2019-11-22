@@ -21,3 +21,11 @@ export const VisibilityFilters = {
 	SHOW_COMPLETED: 'SHOW_COMPLETED',
 	SHOW_ACTIVE: 'SHOW_ACTIVE'
 }
+
+
+
+/* Heroes =========================================================================================== */
+export const addHero = hero => ({
+	type: "ADD_HERO",
+	name: hero.name
+})
