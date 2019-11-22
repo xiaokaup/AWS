@@ -1,7 +1,6 @@
 'use strict'
 
 const express = require('express');
-const cors = require('cors')
 const bodyParse = require('body-parser');
 const db = require('./queries');
 
@@ -12,7 +11,18 @@ const PORT = 8080;
 const app = express();
 const url_prefix="";
 
-app.use(cors());
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "PUT, GET, POST, DELETE, OPTIONS");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization, Access-Control-Allow-Credentials");
+  res.header("Access-Control-Allow-Credentials", "true");
+  if (req.method == "OPTIONS") {
+    res.send(200);
+  }
+  else {
+    next();
+  }
+});
 app.use(
 	bodyParse.urlencoded({
 		extended: true,
