@@ -35,7 +35,7 @@ class Dashboard extends React.Component  {
 					{
 					this.state.cards 
 					&&	
-					<div class="grid grid-pad">
+					<div className="grid grid-pad">
 						<Cards cards={this.state.cards} specific_style={style_border_box} />
 					</div>
 					}
