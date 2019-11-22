@@ -94,7 +94,7 @@ const updateHero = (request, response) => {
 		[name, id],
 		(error, results) => {
 			if (error) throw error;
-			response.status(200).send(`Hero modified with ID: ${id}`);
+			response.status(200).json({method: 'PUT', name, id});
 		}
 	);
 }
