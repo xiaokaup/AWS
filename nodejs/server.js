@@ -1,6 +1,7 @@
 'use strict'
 
 const express = require('express');
+const cors = require('cors')
 const bodyParse = require('body-parser');
 const db = require('./queries');
 
@@ -11,6 +12,7 @@ const PORT = 8080;
 const app = express();
 const url_prefix="";
 
+app.use(cors());
 app.use(
 	bodyParse.urlencoded({
 		extended: true,
