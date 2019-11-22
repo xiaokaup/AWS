@@ -20,13 +20,13 @@ services:
       - NGINX_HOST=http://52.47.121.120
       - NGINX_PORT=80
     depends_on:
-      # - angular
+       - angular
       # - flask
-      - react
+      # - react
     links:
-      # - angular
+       - angular
       # - flask
-      - react
+      # - react
 
   react:
     container_name: react
