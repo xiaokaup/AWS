@@ -105,7 +105,7 @@ const deleteHero = (request, response) => {
 
 	pool.query('DELETE FROM heroes WHERE id = $1', [id], (error, results) => {
 		if (error) throw error;
-		response.status(200).send(`Hero deleted with ID: ${id}`);
+		response.status(200).json({method: 'DELETE', id: id});
 	});
 }
 
