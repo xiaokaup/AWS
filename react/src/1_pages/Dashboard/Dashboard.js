@@ -4,6 +4,10 @@ import { Cards } from '../../3_elements/Cards'
 
 
 class Dashboard extends React.Component  {
+	componentDidMount() {
+		this.props.getAllHeroes()
+	}
+
 	render() {
 		const style_border_box = {
 			boxSizing: "border-box"
