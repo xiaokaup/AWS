@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import './Heroes.css'
 import { Lists } from '../../3_elements/Lists'
+import { isArrayEqual } from '../../4_scripts'
 
 
 class Heroes extends React.Component  {
@@ -19,6 +20,11 @@ class Heroes extends React.Component  {
 
 	componentDidUpdate() {
 		this.props.getAllHeroes();
+	}
+
+	shouldComponentUpdate(nextProps, nextState) {
+		if(!isArrayEqual(this.props.lists, nextProps.lists) || this.state.newHeroName!==nextState.newHeroName) return true;
+		else return false;
 	}
 
 	handleChange(event) {
