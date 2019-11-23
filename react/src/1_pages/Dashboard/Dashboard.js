@@ -6,17 +6,22 @@ import { Cards } from '../../3_elements/Cards'
 class Dashboard extends React.Component  {
 	constructor(props) {
 		super(props)
-		this.state = {cards: []}
+		this.state = {cards: props.cards.slice(0,4)}
+		console.log(props)
+		console.log(props.getFourHeroes)
+		console.log(props.getFourHeroes())
+		console.log(typeof(props.getFourHeroes()))
 	}
 
 	componentDidMount() {
-		fetch("http://35.180.32.33/nodejs/heroes")
-			.then(response => {
-				return response.json();
-			})
-			.then(heroes => {
-				this.setState({cards: heroes.slice(0,4)});
-			})
+		// fetch("http://35.180.32.33/nodejs/heroes")
+		// 	.then(response => {
+		// 		return response.json();
+		// 	})
+		// 	.then(heroes => {
+		// 		console.log(heroes)
+		// 		this.setState({cards: heroes.slice(0,4)});
+		// 	})
 	}
 
 	render() {
