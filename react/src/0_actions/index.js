@@ -29,8 +29,9 @@ export const getAllHeroes = () => ({
 	type: 'GET_ALL_HEROES'
 })
 
-export const addHero = ({name}) => ({
+export const addHero = ({id, name}) => ({
 	type: 'POST_HERO',
+	id,
 	name
 })
 
@@ -45,11 +46,11 @@ export const updateHero = ({id, name}) => ({
 	name
 })
 
-export const deleteHero = (id) => ({
+export const deleteHero = ({id}) => ({
 	type: 'DELETE_HERO',
 	id
 })
 
-export const deleteAllHero = () => ({
+export const deleteAllHeroes = () => ({
 	type: 'DELETE_ALL_HERO'
 })

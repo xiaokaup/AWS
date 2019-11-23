@@ -20,7 +20,8 @@ const R_Heroes = (state=[...mock_data], action) => {
 			return [
 				...state,
 				{
-					name: action.name
+					name: action.name,
+					id: action.id
 				}
 			]
 		case 'GET_BYID_HERO':

@@ -6,22 +6,22 @@ import { Lists } from '../../3_elements/Lists'
 class Heroes extends React.Component  {
 	constructor(props) {
 		super(props)
-		this.state = {lists: [], newHeroName: ""}
+		this.state = {newHeroName: ""}
 
 		this.handleChange = this.handleChange.bind(this);
 		this.handleAddHero = this.handleAddHero.bind(this);
 		this.handleDeleteHero = this.handleDeleteHero.bind(this);
 	}
 
-	componentDidMount() {
-		fetch("http://35.180.32.33/nodejs/heroes")
-			.then(response => {
-				return response.json();
-			})
-			.then(heroes => {
-				this.setState({lists: heroes});
-			})
-	}
+	// componentDidMount() {
+		// fetch("http://35.180.32.33/nodejs/heroes")
+		// 	.then(response => {
+		// 		return response.json();
+		// 	})
+		// 	.then(heroes => {
+		// 		this.setState({lists: heroes});
+		// 	})
+	// }
 
 	handleChange(event) {
 		this.setState({newHeroName: event.target.value});
@@ -29,59 +29,39 @@ class Heroes extends React.Component  {
 
 	handleAddHero(event) {
 		const postHero = (url, data) => {
-		  // Default options are marked with *
 		  return fetch(url, {
 		    headers: {
-		      // 'user-agent': 'Mozilla/4.0 MDN Example',
 		      'content-type': 'application/json'
 		    },
 		    method: 'POST', // *GET, POST, PUT, DELETE, etc.
 		    body: JSON.stringify(data), // must match 'Content-Type' header
-		    // cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-		    // credentials: 'same-origin', // include, same-origin, *omit
-		    // mode: 'cors', // no-cors, cors, *same-origin
-		    // redirect: 'follow', // manual, *follow, error
-		    // referrer: 'no-referrer', // *client, no-referrer
 		  })
 		  .then(response => response.json()) // parses response to JSON
 		}
 
 		postHero("http://35.180.32.33/nodejs/heroes", {name: this.state.newHeroName})
 			.then(data => {
-				const heroes = this.state.lists;
-				heroes.push(data);
-				this.setState({lists: heroes});
+				this.props.addHero(data);
 			})
 			.catch(error => console.log(error))
 	}
 
 	handleDeleteHero(event, id) {
 		const deleteHero = (url) => {
-		  // Default options are marked with *
 		  return fetch(url, {
 		    headers: {
-		      // 'user-agent': 'Mozilla/4.0 MDN Example',
 		      'content-type': 'application/json'
 		    },
 		    method: 'DELETE', // *GET, POST, PUT, DELETE, etc.
-		    // body: JSON.stringify(data), // must match 'Content-Type' header
-		    // cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-		    // credentials: 'same-origin', // include, same-origin, *omit
-		    // mode: 'cors', // no-cors, cors, *same-origin
-		    // redirect: 'follow', // manual, *follow, error
-		    // referrer: 'no-referrer', // *client, no-referrer
 		  })
 		  .then(response => response.json()) // parses response to JSON
 		}
 
 		deleteHero("http://35.180.32.33/nodejs/heroes/"+id)
 			.then(data => {
-				const heroes = this.state.lists;
-				const heroes_filter = heroes.filter(x => {return x.id !== data.id})
-				this.setState({lists: heroes_filter});
+				this.props.deleteHero(data);
 			})
 			.catch(error => console.log(error))
-
 	}
 
 	render() {
@@ -101,7 +81,7 @@ class Heroes extends React.Component  {
 						</button>
 					</div>
 					
-					<Lists ul_class="heroes" specific_style={null} lists={this.state.lists} handleDeleteHero={this.handleDeleteHero} />
+					<Lists ul_class="heroes" specific_style={null} lists={this.props.lists} handleDeleteHero={this.handleDeleteHero} />
 				
 					{/*<app-hero-search></app-hero-search>*/}
 				</div>

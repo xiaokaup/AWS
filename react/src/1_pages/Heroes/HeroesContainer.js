@@ -1,18 +1,20 @@
 import { connect } from 'react-redux';
-import Dashboard from './Dashboard';
-import { getAllHeroes, deleteAllHeroes } from '../../0_actions'
+import Heroes from './Heroes';
+import { getAllHeroes, addHero, deleteHero, deleteAllHeroes } from '../../0_actions'
 
 const mapStateToProps = (state, ownProps) => ({
-	cards: state.heroes
+	lists: state.heroes
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-	dispatch, // this dispatch is for the class component
+	dispatch,
 	getAllHeroes: () => dispatch(getAllHeroes()),
+	addHero: ({id, name}) => dispatch(addHero({id, name})),
+	deleteHero: ({id}) => dispatch(deleteHero({id})),
 	deleteAllHeroes: () => dispatch(deleteAllHeroes())
 })
 
 export default connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(Dashboard)
+)(Heroes)

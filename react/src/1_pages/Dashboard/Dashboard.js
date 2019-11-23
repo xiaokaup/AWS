@@ -4,7 +4,7 @@ import { Cards } from '../../3_elements/Cards'
 
 
 class Dashboard extends React.Component  {
-	componentDidMount() {
+	// componentDidMount() {
 		// fetch("http://35.180.32.33/nodejs/heroes")
 		// 	.then(response => {
 		// 		return response.json();
@@ -13,7 +13,7 @@ class Dashboard extends React.Component  {
 		// 		console.log(heroes)
 		// 		this.setState({cards: heroes.slice(0,4)});
 		// 	})
-	}
+	// }
 
 	render() {
 		const style_border_box = {
@@ -26,8 +26,8 @@ class Dashboard extends React.Component  {
 				</div>
 				<div id="content">
 					<h3>Top Heroes</h3>
-					<button onClick={this.props.hideFourHeroes}>hide all</button>
-					<button onClick={this.props.getFourHeroes}>show all</button>
+					<button onClick={this.props.deleteAllHeroes}>hide all</button>
+					<button onClick={this.props.getAllHeroes}>show all</button>
 					{
 					this.props.cards 
 					&&	
