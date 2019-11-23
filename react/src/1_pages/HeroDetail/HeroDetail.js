@@ -37,19 +37,12 @@ class HeroDetail extends React.Component  {
 
 	save() {
 		const putHero = (url, data) => {
-		  // Default options are marked with *
 		  return fetch(url, {
 		    headers: {
-		      // 'user-agent': 'Mozilla/4.0 MDN Example',
 		      'content-type': 'application/json'
 		    },
 		    method: 'PUT', // *GET, POST, PUT, DELETE, etc.
 		    body: JSON.stringify(data), // must match 'Content-Type' header
-		    // cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-		    // credentials: 'same-origin', // include, same-origin, *omit
-		    // mode: 'cors', // no-cors, cors, *same-origin
-		    // redirect: 'follow', // manual, *follow, error
-		    // referrer: 'no-referrer', // *client, no-referrer
 		  })
 		  .then(response => response.json()) // parses response to JSON
 		}
@@ -57,6 +50,7 @@ class HeroDetail extends React.Component  {
 		const id = this.state.hero_id;
 		putHero("http://35.180.32.33/nodejs/heroes/"+id, {name: this.state.hero_update_name, id: id})
 			.then(hero_update => {
+				this.props.updateHero(hero_update);
 				this.setState({hero_name: hero_update.name})
 			})
 			.catch(error => console.log(error))
@@ -70,7 +64,7 @@ class HeroDetail extends React.Component  {
 				</div>
 				<div id="content">
 				{
-					this.state.hero_id && this.state.hero_name
+					this.state.hero_name
 					&&
 					<Fragment>
 						<h2>{this.state.hero_name.toUpperCase()} Details</h2>
