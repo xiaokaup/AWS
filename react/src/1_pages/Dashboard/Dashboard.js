@@ -4,19 +4,8 @@ import { Cards } from '../../3_elements/Cards'
 
 
 class Dashboard extends React.Component  {
-	constructor(props) {
-		super(props)
-		this.state = {cards: []}
-	}
-
 	componentDidMount() {
-		fetch("http://35.180.32.33/nodejs/heroes")
-			.then(response => {
-				return response.json();
-			})
-			.then(heroes => {
-				this.setState({cards: heroes.slice(0,4)});
-			})
+		this.props.getAllHeroes()
 	}
 
 	render() {
@@ -29,18 +18,16 @@ class Dashboard extends React.Component  {
 					{/*<app-messages></app-messages>*/}
 				</div>
 				<div id="content">
-					{/*<router-outlet></router-outlet>*/}
 					<h3>Top Heroes</h3>
-
+					<button onClick={this.props.deleteAllHeroes}>hide all</button>
+					<button onClick={this.props.getAllHeroes}>show all</button>
 					{
-					this.state.cards 
+					this.props.cards 
 					&&	
 					<div className="grid grid-pad">
-						<Cards cards={this.state.cards} specific_style={style_border_box} />
+						<Cards cards={this.props.cards.slice(0,4)} specific_style={style_border_box} />
 					</div>
 					}
-
-					{/*<app-hero-search></app-hero-search>*/}
 				</div>
 			</Fragment>
 		);

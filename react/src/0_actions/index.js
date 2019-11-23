@@ -23,9 +23,34 @@ export const VisibilityFilters = {
 }
 
 
-
 /* Heroes =========================================================================================== */
-export const addHero = hero => ({
-	type: "ADD_HERO",
-	name: hero.name
+export const getAllHeroes = (heroes) => ({
+	type: 'GET_ALL_HEROES',
+	heroes
+})
+
+export const addHero = ({id, name}) => ({
+	type: 'POST_HERO',
+	id,
+	name
+})
+
+export const getByIdHero = ({id}) => ({
+	type: 'GET_BYID_HERO',
+	id
+})
+
+export const updateHero = ({id, name}) => ({
+	type: 'UPDATE_HERO',
+	id,
+	name
+})
+
+export const deleteHero = ({id}) => ({
+	type: 'DELETE_HERO',
+	id
+})
+
+export const deleteAllHeroes = () => ({
+	type: 'DELETE_ALL_HERO'
 })
