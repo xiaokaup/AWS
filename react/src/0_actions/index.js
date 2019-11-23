@@ -49,3 +49,7 @@ export const deleteHero = (id) => ({
 	type: 'DELETE_HERO',
 	id
 })
+
+export const deleteAllHero = () => ({
+	type: 'DELETE_ALL_HERO'
+})

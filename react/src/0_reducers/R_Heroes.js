@@ -14,7 +14,7 @@ const mock_data = [
 const R_Heroes = (state=[...mock_data], action) => {
 	switch(action.type) {
 		case 'GET_ALL_HEROES': {
-			return []
+			return mock_data
 		}
 		case 'POST_HERO':
 			return [
@@ -32,6 +32,8 @@ const R_Heroes = (state=[...mock_data], action) => {
 		}
 		case 'DELETE_HERO':
 			return state.filter(hero => hero.id!==action.id)
+		case 'DELETE_ALL_HERO':
+			return []
 		default:
 			return state
 	}
