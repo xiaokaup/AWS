@@ -13,15 +13,13 @@ class Heroes extends React.Component  {
 		this.handleDeleteHero = this.handleDeleteHero.bind(this);
 	}
 
-	// componentDidMount() {
-		// fetch("http://35.180.32.33/nodejs/heroes")
-		// 	.then(response => {
-		// 		return response.json();
-		// 	})
-		// 	.then(heroes => {
-		// 		this.setState({lists: heroes});
-		// 	})
-	// }
+	componentDidMount() {
+		this.props.getAllHeroes();
+	}
+
+	componentDidUpdate() {
+		this.props.getAllHeroes();
+	}
 
 	handleChange(event) {
 		this.setState({newHeroName: event.target.value});

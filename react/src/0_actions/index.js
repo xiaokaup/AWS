@@ -23,10 +23,10 @@ export const VisibilityFilters = {
 }
 
 
-
 /* Heroes =========================================================================================== */
-export const getAllHeroes = () => ({
-	type: 'GET_ALL_HEROES'
+export const getAllHeroes = (heroes) => ({
+	type: 'GET_ALL_HEROES',
+	heroes
 })
 
 export const addHero = ({id, name}) => ({

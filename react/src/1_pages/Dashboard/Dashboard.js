@@ -4,17 +4,6 @@ import { Cards } from '../../3_elements/Cards'
 
 
 class Dashboard extends React.Component  {
-	// componentDidMount() {
-		// fetch("http://35.180.32.33/nodejs/heroes")
-		// 	.then(response => {
-		// 		return response.json();
-		// 	})
-		// 	.then(heroes => {
-		// 		console.log(heroes)
-		// 		this.setState({cards: heroes.slice(0,4)});
-		// 	})
-	// }
-
 	render() {
 		const style_border_box = {
 			boxSizing: "border-box"

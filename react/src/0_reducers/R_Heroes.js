@@ -1,21 +1,20 @@
-const mock_data = [
-	{id: 1, name: "Jiean Yang"},
-	{id: 2, name: "Dr Nice"},
-	{id: 3, name: "Narco"},
-	{id: 4, name: "Bombasto"},
-	{id: 5, name: "Celeritas"},
-	{id: 6, name: "Magneta"},
-	{id: 7, name: "RubberMan"},
-	{id: 8, name: "Dynama"},
-	{id: 9, name: "DR IQ"},
-	{id: 10, name: "Magma"}
-]
+// const mock_data = [
+// 	{id: 1, name: "Jiean Yang"},
+// 	{id: 2, name: "Dr Nice"},
+// 	{id: 3, name: "Narco"},
+// 	{id: 4, name: "Bombasto"},
+// 	{id: 5, name: "Celeritas"},
+// 	{id: 6, name: "Magneta"},
+// 	{id: 7, name: "RubberMan"},
+// 	{id: 8, name: "Dynama"},
+// 	{id: 9, name: "DR IQ"},
+// 	{id: 10, name: "Magma"}
+// ]
 
-const R_Heroes = (state=[...mock_data], action) => {
+const R_Heroes = (state=[], action) => {
 	switch(action.type) {
-		case 'GET_ALL_HEROES': {
-			return mock_data
-		}
+		case 'GET_ALL_HEROES': 
+			return Object.assign([], state, action.heroes)
 		case 'POST_HERO':
 			return [
 				...state,
