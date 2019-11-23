@@ -1,4 +1,3 @@
-
 import React, { Fragment } from 'react'
 import Header from './1_pages/Common/Header'
 import NavBar from './1_pages/Common/NavBar'
