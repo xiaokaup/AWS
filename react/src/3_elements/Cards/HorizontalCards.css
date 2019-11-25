@@ -21,11 +21,11 @@
 }
 .horizontalCards [class*='col-'] {
   float: left;
-  padding-right: 17px;
-  padding-bottom: 17px;
+  padding-right: 15px;
+  padding-bottom: 15px;
 }
 .horizontalCards [class*='col-']:first-of-type {
-  padding-left: 17px
+  padding-left: 15px
 }
 .horizontalCards .grid-pad > [class*='col-']:last-of-type {
   /*padding-right: 10px;*/

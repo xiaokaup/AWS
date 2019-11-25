@@ -10,9 +10,6 @@ class Dashboard extends React.Component  {
 	}
 
 	render() {
-		const style_box_sizing = {
-			// boxSizing: "border-box"
-		}
 		return (
 			<div id="page_dashboard">
 				<h3>Top Heroes</h3>
@@ -21,7 +18,7 @@ class Dashboard extends React.Component  {
 				{
 					this.props.cards 
 					&&	
-					<Cards cards={this.props.cards.slice(0,4)} specific_style={style_box_sizing} />
+					<Cards cards_class="horizontalCards" cards={this.props.cards.slice(0,4)} specific_style={null} />
 				}
 			</div>
 		);

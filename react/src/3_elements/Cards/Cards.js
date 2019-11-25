@@ -15,7 +15,7 @@ export function Cards(props) {
 			);
 
 	return (
-		<div className="horizontalCards">
+		<div className={props.cards_class}>
 			<div className={"grid grid-pad"}>
 				{cards}
 			</div>
