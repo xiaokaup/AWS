@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import Heroes from './Heroes';
-import { addHero, deleteHero, deleteAllHeroes } from '../../0_actions'
-import { async_getAllHeroes } from '../../0_actions/fetchHeroes'
+import { deleteAllHeroes } from '../../0_actions'
+import { async_getAllHeroes, aysnc_postHero, aysnc_deleteHero } from '../../0_actions/fetchHeroes'
 
 const mapStateToProps = (state, ownProps) => ({
 	lists: state.heroes
@@ -10,8 +10,8 @@ const mapStateToProps = (state, ownProps) => ({
 const mapDispatchToProps = (dispatch, ownProps) => ({
 	dispatch,
 	getAllHeroes: () => dispatch(async_getAllHeroes()),
-	addHero: ({id, name}) => dispatch(addHero({id, name})),
-	deleteHero: ({id}) => dispatch(deleteHero({id})),
+	addHero: (name) => dispatch(aysnc_postHero(name)),
+	deleteHero: (id) => dispatch(aysnc_deleteHero(id)),
 	deleteAllHeroes: () => dispatch(deleteAllHeroes())
 })
 

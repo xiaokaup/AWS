@@ -32,40 +32,11 @@ class Heroes extends React.Component  {
 	}
 
 	handleAddHero(event) {
-		const postHero = (url, data) => {
-		  return fetch(url, {
-		    headers: {
-		      'content-type': 'application/json'
-		    },
-		    method: 'POST', // *GET, POST, PUT, DELETE, etc.
-		    body: JSON.stringify(data), // must match 'Content-Type' header
-		  })
-		  .then(response => response.json()) // parses response to JSON
-		}
-
-		postHero("http://35.180.32.33/nodejs/heroes", {name: this.state.newHeroName})
-			.then(data => {
-				this.props.addHero(data);
-			})
-			.catch(error => console.log(error))
+		this.props.addHero(this.state.newHeroName)
 	}
 
 	handleDeleteHero(event, id) {
-		const deleteHero = (url) => {
-		  return fetch(url, {
-		    headers: {
-		      'content-type': 'application/json'
-		    },
-		    method: 'DELETE', // *GET, POST, PUT, DELETE, etc.
-		  })
-		  .then(response => response.json()) // parses response to JSON
-		}
-
-		deleteHero("http://35.180.32.33/nodejs/heroes/"+id)
-			.then(data => {
-				this.props.deleteHero(data);
-			})
-			.catch(error => console.log(error))
+		this.props.deleteHero(id)
 	}
 
 	render() {
