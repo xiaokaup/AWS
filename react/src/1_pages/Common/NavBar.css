@@ -18,4 +18,5 @@ nav a:hover {
   background-color: #161717;
   color: #79d480;
   border-radius: 3px;
+  text-decoration: none;
 }
