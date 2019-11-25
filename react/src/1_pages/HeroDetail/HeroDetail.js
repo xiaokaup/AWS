@@ -36,24 +36,8 @@ class HeroDetail extends React.Component  {
 	}
 
 	save() {
-		const putHero = (url, data) => {
-		  return fetch(url, {
-		    headers: {
-		      'content-type': 'application/json'
-		    },
-		    method: 'PUT', // *GET, POST, PUT, DELETE, etc.
-		    body: JSON.stringify(data), // must match 'Content-Type' header
-		  })
-		  .then(response => response.json()) // parses response to JSON
-		}
-
-		const id = this.state.hero_id;
-		putHero("http://35.180.32.33/nodejs/heroes/"+id, {name: this.state.hero_update_name, id: id})
-			.then(hero_update => {
-				this.props.updateHero(hero_update);
-				this.setState({hero_name: hero_update.name})
-			})
-			.catch(error => console.log(error))
+		this.props.updateHero({id: this.state.hero_id, name: this.state.hero_update_name})
+			.then(() => this.setState({hero_name: this.state.hero_update_name}));
 	}
 
 	render() {
