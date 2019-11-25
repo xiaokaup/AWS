@@ -1,15 +1,17 @@
 import React, { Fragment } from 'react'
+import { Route, Switch } from 'react-router-dom'
+
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css'
+
 import Header from './1_pages/Common/Header'
 import NavBar from './1_pages/Common/NavBar'
 import Footer from './1_pages/Common/Footer'
-import { Route, Switch } from 'react-router-dom'
 import ReduxApp from './1_pages/ReduxApp/ReduxApp'
 import DashboardContainer from './1_pages/Dashboard/DashboardContainer'
 import HeroesContainer from './1_pages/Heroes/HeroesContainer'
 import HeroDetailContainer from './1_pages/HeroDetail/HeroDetailContainer'
-import './App.css'
-
-
 
 const App = ({ component: Component, ...rest }) => (
 	<Fragment>
