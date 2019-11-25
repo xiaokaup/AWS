@@ -27,6 +27,17 @@ export const async_getAllHeroes = () => (dispatch, getState) => {
     .catch(error => dispatch(fetchFailure(error)))
 }
 
+export const async_getByIdHero = (id) => (dispatch, getState) => {
+  dispatch(fetchStart("getByIdHero: "+id))
+  return fetch("http://35.180.32.33/nodejs/heroes/"+id)
+    .then(response => response.json())
+    .then(byIdHero => {
+      dispatch(fetchSuccess(byIdHero))
+      return byIdHero
+    })
+    .catch(error => dispatch(fetchFailure(error)))
+}
+
 export const aysnc_postHero = (name) => (dispatch, getState) => {
   dispatch(fetchStart("PostHero: "+ name))
   return fetch("http://35.180.32.33/nodejs/heroes", {

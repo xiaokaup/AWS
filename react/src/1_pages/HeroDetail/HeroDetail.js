@@ -17,14 +17,8 @@ class HeroDetail extends React.Component  {
 	}
 
 	componentDidMount() {
-		const id = this.props.match.params.id;
-		fetch("http://35.180.32.33/nodejs/heroes/"+id)
-			.then(response => {
-				return response.json();
-			})
-			.then(hero => {
-				this.setState({hero_name: hero.name, hero_id: hero.id});
-			})
+		this.props.getByIdHero(this.props.match.params.id)
+			.then(byIdHero => this.setState({hero_name: byIdHero.name, hero_id: byIdHero.id}))
 	}
 
 	handleChange(event) {
