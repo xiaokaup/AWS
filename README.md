@@ -23,12 +23,12 @@ redux https://redux.js.org/
 redux middleware https://redux.js.org/advanced/middleware  
 redux-thunk, redux-logger http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_two_async_operations.html  
 
-
-react https://zh-hans.reactjs.org/docs/hello-world.html  
 Dockerrizing a React App https://mherman.org/blog/dockerizing-a-react-app/  
+react https://zh-hans.reactjs.org/docs/hello-world.html  
+react route https://reacttraining.com/react-router/core/guides/philosophy  
 react redux https://react-redux.js.org/introduction/basic-tutorial  
 react use CSS (Cascading Style Sheets) https://codeburst.io/4-four-ways-to-style-react-components-ac6f323da822  
-react route https://reacttraining.com/react-router/core/guides/philosophy  
+reactstrap https://reactstrap.github.io/  
 
 nginx https://yeasy.gitbooks.io/docker_practice/appendix/repo/nginx.html  
 nginx configure https://juejin.im/post/5aa7704c6fb9a028bb18a993#heading-15  
