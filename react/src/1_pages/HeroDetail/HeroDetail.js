@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import './HeroDetail.css';
-
+import { Button } from 'reactstrap';
 
 class HeroDetail extends React.Component  {
 	constructor(props) {
@@ -37,10 +37,6 @@ class HeroDetail extends React.Component  {
 	render() {
 		return (
 			<Fragment>
-				<div id="messages">
-					{/*<app-messages></app-messages>*/}
-				</div>
-				<div id="content">
 				{
 					this.state.hero_name
 					&&
@@ -53,12 +49,11 @@ class HeroDetail extends React.Component  {
 						  </label>
 						</div>
 						<div>
-							<button id='button_save' onClick={this.save}>save</button>
-							<button id='button_goBack' onClick={this.goBack}>go back</button>
+							<Button id='button_save' color='primary' onClick={this.save}>save</Button>
+							<Button id='button_goBack' color='primary' onClick={this.goBack}>go back</Button>
 						</div>
 					</Fragment>
 				}
-				</div>
 			</Fragment>
 		);
 	}

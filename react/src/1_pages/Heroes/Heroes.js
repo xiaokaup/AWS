@@ -1,7 +1,8 @@
 import React, { Fragment } from 'react'
 import './Heroes.css'
-import { Lists } from '../../3_elements/Lists'
+import { Lists } from '../../3_elements/List/List'
 import { isArrayEqual } from '../../4_scripts'
+import { Button } from 'reactstrap'
 
 
 class Heroes extends React.Component  {
@@ -23,7 +24,7 @@ class Heroes extends React.Component  {
 	}
 
 	shouldComponentUpdate(nextProps, nextState) {
-		if(!isArrayEqual(this.props.lists, nextProps.lists) || this.state.newHeroName!==nextState.newHeroName) return true;
+		if(!isArrayEqual(this.props.listHeroes, nextProps.listHeroes) || this.state.newHeroName!==nextState.newHeroName) return true;
 		else return false;
 	}
 
@@ -41,26 +42,21 @@ class Heroes extends React.Component  {
 
 	render() {
 		return (
-			<Fragment>
-				<div id="messages">
-					{/*<app-messages></app-messages>*/}
+			<div id='page_heroes'>
+				<h2>My Heroes</h2>
+				<div>
+					<label>Hero name:{' '}
+						<input type="text" value={this.state.newHeroName} onChange={this.handleChange} />
+					</label>
+					<Button color='primary' onClick={this.handleAddHero}>
+						add
+					</Button>
 				</div>
-				<div id="content">
-					<h2>My Heroes</h2>
-					<div>
-						<label>Hero name:
-							<input type="text" value={this.state.newHeroName} onChange={this.handleChange} />
-						</label>
-						<button onClick={this.handleAddHero}>
-							add
-						</button>
-					</div>
-					
-					<Lists ul_class="heroes" specific_style={null} lists={this.props.lists} handleDeleteHero={this.handleDeleteHero} />
 				
-					{/*<app-hero-search></app-hero-search>*/}
-				</div>
-			</Fragment>
+				<Lists ul_class="badgeList" specific_style={null} list={this.props.listHeroes} handleDeleteHero={this.handleDeleteHero} />
+			
+				{/*<app-hero-search></app-hero-search>*/}
+			</div>
 		);
 	}
 }

@@ -4,7 +4,7 @@ import { deleteAllHeroes } from '../../0_actions'
 import { async_getAllHeroes, aysnc_postHero, aysnc_deleteHero } from '../../0_actions/fetchHeroes'
 
 const mapStateToProps = (state, ownProps) => ({
-	lists: state.heroes
+	listHeroes: state.heroes
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => ({

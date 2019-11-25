@@ -1,4 +1,5 @@
 import React, {Fragment} from 'react'
+import './HorizontalCards.css'
 
 export function Cards(props) {
 	const cards = props.cards.map(card => 
@@ -7,15 +8,17 @@ export function Cards(props) {
 					style={props.specific_style}
 					key={card.id}
 				>
-					<div className="module hero">
+					<div className="module">
 						<h4>{card.name}</h4>
 					</div>
 				</a>
 			);
 
 	return (
-		<Fragment>
-			{cards}
-		</Fragment>
+		<div className={props.cards_class}>
+			<div className={"grid grid-pad"}>
+				{cards}
+			</div>
+		</div>
 	)
 }
