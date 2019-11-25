@@ -18,7 +18,7 @@ export const fetchFailure = error => ({
 
 export const async_getAllHeroes = () => (dispatch, getState) => {
   dispatch(fetchStart("getAllHero"))
-  return fetch("http://35.180.32.33/nodejs/heroes")
+  return fetch("http://35.180.32.33/nodejs/heroes", {cache: 'no-cache'})
     .then(response => response.json())
     .then(allHeroes => {
     	dispatch(fetchSuccess(allHeroes))
