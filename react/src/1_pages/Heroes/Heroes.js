@@ -40,6 +40,9 @@ class Heroes extends React.Component  {
 	}
 
 	render() {
+		const style_box_sizing = {
+			boxSizing: "content-box"
+		}
 		return (
 			<Fragment>
 				<h2>My Heroes</h2>
@@ -52,7 +55,7 @@ class Heroes extends React.Component  {
 					</button>
 				</div>
 				
-				<Lists ul_class="badgeList" specific_style={null} list={this.props.listHeroes} handleDeleteHero={this.handleDeleteHero} />
+				<Lists ul_class="badgeList" specific_style={style_box_sizing} list={this.props.listHeroes} handleDeleteHero={this.handleDeleteHero} />
 			
 				{/*<app-hero-search></app-hero-search>*/}
 			</Fragment>

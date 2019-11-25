@@ -9,7 +9,7 @@ class Dashboard extends React.Component  {
 	}
 
 	render() {
-		const style_border_box = {
+		const style_box_sizing = {
 			boxSizing: "border-box"
 		}
 		return (
@@ -21,7 +21,7 @@ class Dashboard extends React.Component  {
 				this.props.cards 
 				&&	
 				<div className="grid grid-pad">
-					<Cards cards={this.props.cards.slice(0,4)} specific_style={style_border_box} />
+					<Cards cards={this.props.cards.slice(0,4)} specific_style={style_box_sizing} />
 				</div>
 				}
 			</Fragment>
