@@ -6,15 +6,9 @@ import './ReduxApp.css'
 
 const ReduxApp = () => (
 	<Fragment>
-		<div id="messages">
-			{/*<app-messages></app-messages>*/}
-		</div>
-		<div id="content">
-			{/*<router-outlet></router-outlet>*/}
-			<FilterTodoView />
-			<AddTodoView />
-			<VisibleTodoListContainer />
-		</div>
+		<FilterTodoView />
+		<AddTodoView />
+		<VisibleTodoListContainer />
 	</Fragment>
 )
 

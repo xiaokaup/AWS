@@ -37,10 +37,6 @@ class HeroDetail extends React.Component  {
 	render() {
 		return (
 			<Fragment>
-				<div id="messages">
-					{/*<app-messages></app-messages>*/}
-				</div>
-				<div id="content">
 				{
 					this.state.hero_name
 					&&
@@ -58,7 +54,6 @@ class HeroDetail extends React.Component  {
 						</div>
 					</Fragment>
 				}
-				</div>
 			</Fragment>
 		);
 	}

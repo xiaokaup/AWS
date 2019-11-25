@@ -42,24 +42,19 @@ class Heroes extends React.Component  {
 	render() {
 		return (
 			<Fragment>
-				<div id="messages">
-					{/*<app-messages></app-messages>*/}
+				<h2>My Heroes</h2>
+				<div>
+					<label>Hero name:
+						<input type="text" value={this.state.newHeroName} onChange={this.handleChange} />
+					</label>
+					<button onClick={this.handleAddHero}>
+						add
+					</button>
 				</div>
-				<div id="content">
-					<h2>My Heroes</h2>
-					<div>
-						<label>Hero name:
-							<input type="text" value={this.state.newHeroName} onChange={this.handleChange} />
-						</label>
-						<button onClick={this.handleAddHero}>
-							add
-						</button>
-					</div>
-					
-					<Lists ul_class="heroes" specific_style={null} lists={this.props.lists} handleDeleteHero={this.handleDeleteHero} />
 				
-					{/*<app-hero-search></app-hero-search>*/}
-				</div>
+				<Lists ul_class="heroes" specific_style={null} lists={this.props.lists} handleDeleteHero={this.handleDeleteHero} />
+			
+				{/*<app-hero-search></app-hero-search>*/}
 			</Fragment>
 		);
 	}
