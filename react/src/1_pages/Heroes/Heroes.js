@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import './Heroes.css'
-import { Lists } from '../../3_elements/Lists'
+import { Lists } from '../../3_elements/List/List'
 import { isArrayEqual } from '../../4_scripts'
 
 
@@ -23,7 +23,7 @@ class Heroes extends React.Component  {
 	}
 
 	shouldComponentUpdate(nextProps, nextState) {
-		if(!isArrayEqual(this.props.lists, nextProps.lists) || this.state.newHeroName!==nextState.newHeroName) return true;
+		if(!isArrayEqual(this.props.listHeroes, nextProps.listHeroes) || this.state.newHeroName!==nextState.newHeroName) return true;
 		else return false;
 	}
 
@@ -52,7 +52,7 @@ class Heroes extends React.Component  {
 					</button>
 				</div>
 				
-				<Lists ul_class="heroes" specific_style={null} lists={this.props.lists} handleDeleteHero={this.handleDeleteHero} />
+				<Lists ul_class="badgeList" specific_style={null} list={this.props.listHeroes} handleDeleteHero={this.handleDeleteHero} />
 			
 				{/*<app-hero-search></app-hero-search>*/}
 			</Fragment>
