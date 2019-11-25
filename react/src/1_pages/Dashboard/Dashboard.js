@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import './Dashboard.css'
-import { Cards } from '../../3_elements/Cards'
+import { Cards } from '../../3_elements/Cards/Cards'
+import { Button } from 'reactstrap'
 
 
 class Dashboard extends React.Component  {
@@ -10,21 +11,19 @@ class Dashboard extends React.Component  {
 
 	render() {
 		const style_box_sizing = {
-			boxSizing: "border-box"
+			// boxSizing: "border-box"
 		}
 		return (
-			<Fragment>
+			<div id="page_dashboard">
 				<h3>Top Heroes</h3>
-				<button onClick={this.props.deleteAllHeroes}>hide all</button>
-				<button onClick={this.props.getAllHeroes}>show all</button>
+				<Button color='info' onClick={this.props.deleteAllHeroes}>hide all</Button>
+				<Button color='info' onClick={this.props.getAllHeroes}>show all</Button>
 				{
-				this.props.cards 
-				&&	
-				<div className="grid grid-pad">
+					this.props.cards 
+					&&	
 					<Cards cards={this.props.cards.slice(0,4)} specific_style={style_box_sizing} />
-				</div>
 				}
-			</Fragment>
+			</div>
 		);
 	}
 }
