@@ -7,7 +7,7 @@ import React from 'react'
 import { render } from 'react-dom'
 import rootReducer, { enableBatching } from './0_reducers'
 import App from './App'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { Router } from 'react-router-dom'
 import { createBrowserHistory } from "history"
 
 
