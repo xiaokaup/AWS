@@ -7,6 +7,7 @@ export const batchActions = (...actions) => {
 }
 
 
+/* reduxApp =========================================================================================== */
 let nextTodoId = 0
 
 export const addTodo = text => ({
@@ -35,6 +36,11 @@ export const VisibilityFilters = {
 /* Heroes =========================================================================================== */
 export const addMessage = text => ({
 	type: 'ADD_MESSAGE',
+	text
+})
+
+export const clearMessages = text => ({
+	type: 'CLEAR_MESSAGES',
 	text
 })
 
