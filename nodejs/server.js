@@ -3,9 +3,15 @@
 const express = require('express');
 const bodyParse = require('body-parser');
 const db = require('./queries');
+const fs = require('fs')
+const https = require('https')
 
 // contants
 const PORT = 8080;
+const options = {
+  key: fs.readFileSync('private.key'),
+  cert: fs.readFileSync('mydomain.crt')
+}
 
 // App
 const app = express();
@@ -46,6 +52,6 @@ app.put(url_prefix + '/heroes/:id', db.updateHero);
 app.delete(url_prefix + '/heroes/:id', db.deleteHero);
 
 
-app.listen(PORT, () => {
+https(options, app).listen(PORT, () => {
 	console.log(`App running on port ${PORT}`)
 });
