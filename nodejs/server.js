@@ -52,6 +52,6 @@ app.put(url_prefix + '/heroes/:id', db.updateHero);
 app.delete(url_prefix + '/heroes/:id', db.deleteHero);
 
 
-https(options, app).listen(PORT, () => {
+https.createServer(options, app).listen(PORT, () => {
 	console.log(`App running on port ${PORT}`)
 });
