@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import './Heroes.css'
 import { Lists } from '../../3_elements/List/List'
 import { isArrayEqual } from '../../4_scripts'

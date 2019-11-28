@@ -12,15 +12,14 @@ import ReduxApp from './1_pages/ReduxApp/ReduxApp'
 import DashboardContainer from './1_pages/Dashboard/DashboardContainer'
 import HeroesContainer from './1_pages/Heroes/HeroesContainer'
 import HeroDetailContainer from './1_pages/HeroDetail/HeroDetailContainer'
+import MessagesLogContainer from './2_components/MessagesLog/MessagesLogContainer'
 
 const App = ({ component: Component, ...rest }) => (
 	<Fragment>
 		<Header />
 		<NavBar />
 		<div id="main">
-			<div id="messages">
-				{/*<app-messages></app-messages>*/}
-			</div>
+			<MessagesLogContainer />
 			<div id="content">
 		  		<Switch>
 				    <Route exact path="/" component={() => <div><h1 style={{color:"black"}}>Home</h1></div>} />
