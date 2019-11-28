@@ -9,6 +9,7 @@ Git https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 
 
 Node.js https://nodejs.org/de/docs/guides/nodejs-docker-webapp/  
+Https nodejs https://segmentfault.com/a/1190000015150714  
 Node-postgres  https://node-postgres.com  
 Setting up a RESTful API with Node.js and PostgreSQL: https://blog.logrocket.com/setting-up-a-restful-api-with-node-js-and-postgresql-d96d6fc892d8/  
 
