@@ -1,3 +1,12 @@
+/* batchActions =========================================================================================== */
+export const batchActions = (...actions) => {
+  return {
+    type: 'BATCH_ACTIONS',
+    actions: actions
+  };
+}
+
+
 let nextTodoId = 0
 
 export const addTodo = text => ({
@@ -22,6 +31,12 @@ export const VisibilityFilters = {
 	SHOW_ACTIVE: 'SHOW_ACTIVE'
 }
 
+
+/* Heroes =========================================================================================== */
+export const addMessage = text => ({
+	type: 'ADD_MESSAGE',
+	text
+})
 
 /* Heroes =========================================================================================== */
 export const getAllHeroes = (heroes) => ({
