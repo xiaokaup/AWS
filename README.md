@@ -22,6 +22,8 @@ angular https://angular.cn/tutorial
 redux https://redux.js.org/  
 redux middleware https://redux.js.org/advanced/middleware  
 redux-thunk, redux-logger http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_two_async_operations.html  
+Make a middleware https://juejin.im/post/5b6c686be51d45194b195146  
+redux applyMiddleware 原理剖析 https://www.jianshu.com/p/47887299cabb  
 
 Dockerrizing a React App https://mherman.org/blog/dockerizing-a-react-app/  
 react https://zh-hans.reactjs.org/docs/hello-world.html  

@@ -1,3 +1,13 @@
+/* batchActions =========================================================================================== */
+export const batchActions = (...actions) => {
+  return {
+    type: 'BATCH_ACTIONS',
+    actions: actions
+  };
+}
+
+
+/* reduxApp =========================================================================================== */
 let nextTodoId = 0
 
 export const addTodo = text => ({
@@ -22,6 +32,17 @@ export const VisibilityFilters = {
 	SHOW_ACTIVE: 'SHOW_ACTIVE'
 }
 
+
+/* Heroes =========================================================================================== */
+export const addMessage = text => ({
+	type: 'ADD_MESSAGE',
+	text
+})
+
+export const clearMessages = text => ({
+	type: 'CLEAR_MESSAGES',
+	text
+})
 
 /* Heroes =========================================================================================== */
 export const getAllHeroes = (heroes) => ({

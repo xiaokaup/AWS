@@ -1,0 +1,29 @@
+#messages h3 {
+  display:inline-block;
+}
+
+#messages button.clear {
+  display: inline-block;
+  position: relative;
+  left: 10px;
+
+  font-family: Arial;
+  font-size: .8rem;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+}
+#messages button:hover {
+  background-color: #cfd8dc;
+}
+#messages button:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: auto;
+}
+#messages button.clear {
+  color: #333;
+}
