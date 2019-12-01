@@ -32,6 +32,7 @@ react route https://reacttraining.com/react-router/core/guides/philosophy
 react redux https://react-redux.js.org/introduction/basic-tutorial  
 react use CSS (Cascading Style Sheets) https://codeburst.io/4-four-ways-to-style-react-components-ac6f323da822  
 reactstrap https://reactstrap.github.io/  
+react-fontawesome https://github.com/FortAwesome/react-fontawesome  
 
 nginx https://yeasy.gitbooks.io/docker_practice/appendix/repo/nginx.html  
 nginx configure https://juejin.im/post/5aa7704c6fb9a028bb18a993#heading-15  
@@ -42,3 +43,8 @@ nginx配置url重写 https://xuexb.com/post/nginx-url-rewrite.html#rewrite
 
 php tutorial http://www.runoob.com/php/php-tutorial.html  
 php laravel 5.8 https://learnku.com/docs/laravel/5.8  
+
+jest test unit and component https://jestjs.io/docs/zh-Hans/getting-started  
+React Test Library  https://testing-library.com/docs/react-testing-library/intro  
+Cucumber(BDD)  https://cucumber.io/  
+Cypress(TDD) https://www.cypress.io/  
