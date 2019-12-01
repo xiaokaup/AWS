@@ -1,5 +1,7 @@
 import { getAllHeroes, addHero, updateHero, deleteHero } from './'
 
+const pre_url = "http://35.180.208.228/"
+
 /* Async ============================================================================================ */
 export const fetchStart = sourceName => ({
 	type: "FETCH_START",
@@ -18,7 +20,7 @@ export const fetchFailure = error => ({
 
 export const async_getAllHeroes = () => (dispatch, getState) => {
   dispatch(fetchStart("getAllHero"))
-  return fetch("http://35.180.32.33/nodejs/heroes", {cache: 'no-cache'})
+  return fetch(pre_url + "nodejs/heroes", {cache: 'no-cache'})
     .then(response => response.json())
     .then(allHeroes => {
     	dispatch(fetchSuccess(allHeroes))
@@ -29,7 +31,7 @@ export const async_getAllHeroes = () => (dispatch, getState) => {
 
 export const async_getByIdHero = (id) => (dispatch, getState) => {
   dispatch(fetchStart("getByIdHero: "+id))
-  return fetch("http://35.180.32.33/nodejs/heroes/"+id)
+  return fetch(pre_url + "nodejs/heroes/"+id)
     .then(response => response.json())
     .then(byIdHero => {
       dispatch(fetchSuccess(byIdHero))
@@ -40,7 +42,7 @@ export const async_getByIdHero = (id) => (dispatch, getState) => {
 
 export const aysnc_postHero = (name) => (dispatch, getState) => {
   dispatch(fetchStart("PostHero: "+ name))
-  return fetch("http://35.180.32.33/nodejs/heroes", {
+  return fetch(pre_url + "nodejs/heroes", {
     headers: {
       'content-type': 'application/json'
     },
@@ -57,7 +59,7 @@ export const aysnc_postHero = (name) => (dispatch, getState) => {
 
 export const aysnc_updateHero = ({id, name}) => (dispatch, getState) => {
   dispatch(fetchStart("updateHero with id: "+id + "and name : " +name))
-  return fetch("http://35.180.32.33/nodejs/heroes/"+id, {
+  return fetch(pre_url + "nodejs/heroes/"+id, {
     headers: {'content-type': 'application/json'},
     method: 'PUT',
     body: JSON.stringify({id, name})
@@ -73,7 +75,7 @@ export const aysnc_updateHero = ({id, name}) => (dispatch, getState) => {
 
 export const aysnc_deleteHero = (id) => (dispatch, getState) => {
   dispatch(fetchStart("deleteHero id: "+id))
-  return fetch("http://35.180.32.33/nodejs/heroes/"+id, {
+  return fetch(pre_url + "nodejs/heroes/"+id, {
     headers: {'content-type': 'application/json'},
     method: 'DELETE',
   })
