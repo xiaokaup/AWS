@@ -22,12 +22,10 @@ services:
       # - angular
       # - flask
       - react
-      - jenkins
     links:
       # - angular
       # - flask
       - react
-      - jenkins
 
   jenkins:
     image: 'jenkins/jenkins:lts'
