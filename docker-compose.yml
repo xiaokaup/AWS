@@ -1,16 +1,5 @@
 version: '3'
 services:
-
-  jenkins:
-    image: 'jenkins/jenkins:lts'
-    container_name: jenkins
-    restart: always
-    ports:
-      - '8081:8081'
-      - '50000:50000'
-    volumes:
-      - './jenkins_home:/var/jenkins_home'
-
   nginx:
     container_name: nginx
     build:
@@ -33,10 +22,22 @@ services:
       # - angular
       # - flask
       - react
+      - jenkins
     links:
       # - angular
       # - flask
       - react
+      - jenkins
+
+  jenkins:
+    image: 'jenkins/jenkins:lts'
+    container_name: jenkins
+    restart: always
+    ports:
+      - '8081:8081'
+      - '50000:50000'
+    volumes:
+      - './jenkins_home:/var/jenkins_home'
 
   react:
     container_name: react
