@@ -1,6 +1,6 @@
 import { getAllHeroes, addHero, updateHero, deleteHero } from './'
 
-const pre_url = "http://35.180.208.228/"
+const pre_url = "http://35.180.205.242/"
 
 /* Async ============================================================================================ */
 export const fetchStart = sourceName => ({
