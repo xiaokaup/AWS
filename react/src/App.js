@@ -5,9 +5,9 @@ import { Route, Switch } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 
-import Header from './1_pages/Common/Header'
-import NavBar from './1_pages/Common/NavBar'
-import Footer from './1_pages/Common/Footer'
+import Header from './2_components/Common/Header'
+import NavBar from './2_components/Common/NavBar'
+import Footer from './2_components/Common/Footer'
 import ReduxApp from './1_pages/ReduxApp/ReduxApp'
 import DashboardContainer from './1_pages/Dashboard/DashboardContainer'
 import HeroesContainer from './1_pages/Heroes/HeroesContainer'
@@ -16,8 +16,8 @@ import MessagesLogContainer from './2_components/MessagesLog/MessagesLogContaine
 
 const App = ({ component: Component, ...rest }) => (
 	<Fragment>
-		<Header />
 		<NavBar />
+		<Header />
 		<div id="main">
 			<MessagesLogContainer />
 			<div id="content">
