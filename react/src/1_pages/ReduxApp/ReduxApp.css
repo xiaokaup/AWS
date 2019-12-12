@@ -1,0 +1,9 @@
+#ReduxApp {
+	padding: 30px;
+	max-height: 100%;
+}
+
+#ReduxApp .row {
+	padding: 5px;
+	margin: 5px;
+}

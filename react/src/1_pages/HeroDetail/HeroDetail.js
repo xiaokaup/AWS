@@ -36,7 +36,7 @@ class HeroDetail extends React.Component  {
 
 	render() {
 		return (
-			<Fragment>
+			<div id="page_hero_detail">
 				{
 					this.state.hero_name
 					&&
@@ -54,7 +54,7 @@ class HeroDetail extends React.Component  {
 						</div>
 					</Fragment>
 				}
-			</Fragment>
+			</div>
 		);
 	}
 }

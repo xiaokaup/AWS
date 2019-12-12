@@ -1,3 +1,7 @@
-#button_save, #button_goBack {
+#page_hero_detail {
+	padding: 30px;
+}
+
+#page_hero_detail #button_save, #button_goBack {
   margin: 5px;
 }
