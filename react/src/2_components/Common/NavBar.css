@@ -1,22 +1,30 @@
-nav {
-  margin: 5px 0;
+
+.header .header-desktop.container {
   background-color: #79d480;
-  border-radius: 6px;
-  padding: 5px;
-}
-
-nav a {
-  display: inline-block;
-  padding: 5px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 1.5em;
-  color: #161717;
-}
-
-nav a:hover {
-  background-color: #161717;
-  color: #79d480;
-  border-radius: 3px;
-  text-decoration: none;
-}
+  max-width: 100%;}
+  .header .header-desktop row {
+    margin: 0;}
+  .header .header-desktop .logo img {
+    width: 130px;
+    height: 130px;}
+  .header .header-desktop .nav a {
+    display: inline-block;
+    padding: 10px;
+    margin: 30px 0;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #161717;}
+  .header .header-desktop .nav a:hover {
+    background-color: #161717;
+    color: #79d480;
+    border-radius: 3px;
+    text-decoration: none;}
+  .header .header-desktop .header-right {
+    background-color: white;
+    height: 130px;
+    text-align: center;
+    line-height: 130px;
+    font-size: 2em;
+    color: #333333;
+  }
