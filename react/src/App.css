@@ -15,7 +15,7 @@ body {
 }
 
 #main {
-  margin: 2px 0;
+  /*margin: 2px 0;*/
 }
 
 #messages {
@@ -38,6 +38,6 @@ body {
 }
 
 #content {
-  min-height: 290px;
-  padding: 2px
+  min-height: 500px;
+  /*padding: 2px*/
 }

@@ -19,12 +19,12 @@ const App = ({ component: Component, ...rest }) => (
 		<Container>
 
 			<NavBar />
-			<Header />
+			{/*<Header />*/}
 			<div id="main">
 				<MessagesLogContainer />
 				<div id="content">
 			  		<Switch>
-					    <Route exact path="/" component={() => <div><h1 style={{color:"black"}}>Home</h1></div>} />
+					    <Route exact path="/" component={Header} />
 			  			<Route path="/reduxApp" component={ReduxApp} />
 			  			<Route path="/Dashboard" component={DashboardContainer} />
 			  			<Route path="/heroes" component={HeroesContainer} />
