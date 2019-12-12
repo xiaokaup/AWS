@@ -1,30 +1,33 @@
 
-.header .header-desktop.container {
+.navBar .navBar-desktop.container {
   background-color: #79d480;
-  max-width: 100%;}
-  .header .header-desktop row {
-    margin: 0;}
-  .header .header-desktop .logo img {
-    width: 130px;
-    height: 130px;}
-  .header .header-desktop .nav a {
-    display: inline-block;
-    padding: 10px;
-    margin: 30px 0;
-    text-align: center;
-    text-decoration: none;
-    font-size: 1.5em;
-    color: #161717;}
-  .header .header-desktop .nav a:hover {
-    background-color: #161717;
-    color: #79d480;
-    border-radius: 3px;
-    text-decoration: none;}
-  .header .header-desktop .header-right {
+  max-width: 100%;
+  height: 110px;}
+  .navBar .navBar-desktop .logo img {
+    width: 100%;
+    height: 110px;}
+  .navBar .navBar-desktop .navs {
+    text-align: center}
+    .navBar .navBar-desktop .navs a {
+      display: inline-block;
+      /*padding: 10px;
+      margin: 30px 0;*/
+      line-height: 110px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 1.5em;
+      color: #161717;}
+    .navBar .navBar-desktop .navs a:hover {
+      background-color: #161717;
+      color: #79d480;
+      /*border-radius: 3px;*/
+      text-decoration: none;
+    width: 100%;}
+  .navBar .navBar-desktop .navBar-right {
     background-color: white;
-    height: 130px;
+    height: 110px;
     text-align: center;
-    line-height: 130px;
+    line-height: 110px;
     font-size: 2em;
     color: #333333;
   }
