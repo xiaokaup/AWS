@@ -1,6 +1,8 @@
 import React from 'react'
 import { Container, Row, Col } from 'reactstrap'
 import './NavBar.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee, faAddressCard, faAt } from '@fortawesome/free-solid-svg-icons'
 
 const NavBar = () => (
   <div className="header">
@@ -20,9 +22,11 @@ const NavBar = () => (
           </Row>
         </Col>
         <Col sm={4}>
-          <div className="header-right">
-            test
-          </div>
+          <Row className="header-right">
+            <Col><FontAwesomeIcon icon={faAddressCard} color="green" /></Col>
+            <Col><FontAwesomeIcon icon={faCoffee} color="green" /></Col>
+            <Col><FontAwesomeIcon icon={faAt} color="green" /></Col>
+          </Row>
         </Col>
       </Row>
     </Container>
