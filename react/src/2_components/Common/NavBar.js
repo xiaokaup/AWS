@@ -13,10 +13,10 @@ const NavBar = () => (
     </Col>
     <Col sm={12} md={7}>
       <Row className="navs">
-        <Col><a href="/">home</a></Col>
-        <Col><a href="/reduxApp">ReduxApp</a></Col>
-        <Col><a href="/Dashboard">Dashboard</a></Col>
-        <Col><a href="/heroes">Heroes</a></Col>
+        <Col sm={6} md={3}><a href="/">home</a></Col>
+        <Col sm={6} md={3}><a href="/reduxApp">ReduxApp</a></Col>
+        <Col sm={6} md={3}><a href="/Dashboard">Dashboard</a></Col>
+        <Col sm={6} md={3}><a href="/heroes">Heroes</a></Col>
       </Row>
     </Col>
     <Col sm={12} md={4}>

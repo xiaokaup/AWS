@@ -7,7 +7,8 @@
     text-align: center;}
   .navBar.navBar-desktop .logo img {
     width: 100%;
-    height: 110px;}
+    height: 110px;
+    transition: width 2s;}
   .navBar.navBar-desktop .navs {
     text-align: center}
     .navBar.navBar-desktop .navs a {
@@ -33,3 +34,10 @@
     font-size: 2em;
     color: #333333;
   }
+
+
+@media screen and (max-width: 767px) {
+  .navBar.navBar-desktop .logo img {
+    width: 110px;
+  }
+}
