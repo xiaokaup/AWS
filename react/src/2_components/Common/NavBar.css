@@ -1,14 +1,14 @@
 
-.navBar .navBar-desktop.container {
+.navBar.navBar-desktop {
   background-color: #79d480;
   max-width: 100%;
   height: 110px;}
-  .navBar .navBar-desktop .logo img {
-    width: 100%;
+  .navBar.navBar-desktop .logo img {
+    width: 110px;
     height: 110px;}
-  .navBar .navBar-desktop .navs {
+  .navBar.navBar-desktop .navs {
     text-align: center}
-    .navBar .navBar-desktop .navs a {
+    .navBar.navBar-desktop .navs a {
       display: inline-block;
       /*padding: 10px;
       margin: 30px 0;*/
@@ -17,13 +17,13 @@
       text-decoration: none;
       font-size: 1.5em;
       color: #161717;}
-    .navBar .navBar-desktop .navs a:hover {
+    .navBar.navBar-desktop .navs a:hover {
       background-color: #161717;
       color: #79d480;
       /*border-radius: 3px;*/
       text-decoration: none;
     width: 100%;}
-  .navBar .navBar-desktop .navBar-right {
+  .navBar.navBar-desktop .navBar-right {
     background-color: white;
     height: 110px;
     text-align: center;
