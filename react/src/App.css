@@ -1,9 +1,21 @@
+
+.container, .row, .col {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+}
+
+[class^="col"] {
+  padding: 0;
+}
+
+
 body {
 	background-color: #fcf3de;
 }
 
 #main {
-  margin: 2px 0;
+  /*margin: 2px 0;*/
 }
 
 #messages {
@@ -26,6 +38,6 @@ body {
 }
 
 #content {
-  min-height: 290px;
-  padding: 2px
+  min-height: 500px;
+  /*padding: 2px*/
 }
