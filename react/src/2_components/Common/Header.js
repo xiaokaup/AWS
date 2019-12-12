@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
-import { Jumbotron, Button } from 'reactstrap';
-import { Row, Col } from 'reactstrap'
+import { Jumbotron, /*Button*/ } from 'reactstrap';
+import { Row } from 'reactstrap'
 import './Header.css'
 
 const Header = () => (
