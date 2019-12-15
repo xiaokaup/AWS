@@ -30,6 +30,9 @@ services:
   jenkins:
     image: 'jenkins/jenkins:lts'
     container_name: jenkins
+    build:
+      context: ./jenkins
+      dockerfile: Dockerfile
     user: root
     restart: always
     ports:
