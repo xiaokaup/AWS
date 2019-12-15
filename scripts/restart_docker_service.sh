@@ -1,6 +1,6 @@
 pwd
 {
-	docker-compose down
+	docker stop react
 } || {
 	echo "Fail to down docker"
 }
