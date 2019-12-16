@@ -32,7 +32,6 @@ services:
     build:
       context: ./jenkins
       dockerfile: Dockerfile
-    image: 'jenkins/jenkins:lts'
     user: root
     restart: always
     ports:
