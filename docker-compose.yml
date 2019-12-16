@@ -32,9 +32,9 @@ services:
     build:
       context: ./jenkins
       dockerfile: Dockerfile
-    user: root
+    # user: root
     restart: always
-    privileged: true
+    # privileged: true
     ports:
       - 8080:8080
       - 50000:50000
