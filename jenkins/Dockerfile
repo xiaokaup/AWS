@@ -1,8 +1,8 @@
 #FROM jenkins/jenkins:lts
 
 
-
 # link: https://forums.docker.com/t/using-docker-in-a-dockerized-jenkins-container/322/10
+
 FROM jenkins/jenkins:2.73.2
 
 # install docker, docker-compose, docker-machine
@@ -12,24 +12,15 @@ FROM jenkins/jenkins:2.73.2
 
 USER root
 
-# prerequisites for docker
-RUN apt-get update \
-    && apt-get -y install \
-        apt-transport-https \
-        ca-certificates \
-        curl \
-        software-properties-common
+ARG DOCKER_CLIENT=docker-17.06.2-ce.tgz
 
-# docker repos
-RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-RUN add-apt-repository \
-	   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-	   $(lsb_release -cs) \
-	   stable"
-
-
-# docker
-RUN apt-get update && apt-get install docker-ce
+RUN cd /tmp/
+&& curl -sSL -O https://download.docker.com/linux/static/stable/x86_64/${DOCKER_CLIENT} 79 \
+&& tar zxf ${DOCKER_CLIENT} \
+&& mkdir -p /usr/local/bin \
+&& mv ./docker/docker /usr/local/bin \
+&& chmod +x /usr/local/bin/docker \
+&& rm -rf /tmp/*
 
 # docker-compose
 RUN curl -L https://github.com/docker/compose/releases/download/1.16.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose \
