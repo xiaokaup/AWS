@@ -121,13 +121,14 @@
   
   .navBar.navBar-desktop .navBar-right #block_faAddressCard #popup_faAddressCard {
     position: absolute;
-    top: 100%;
+    top: -240%;
     left: -165%;
-    transition: left 2s;
+    transition: left 2s, top 2s;
   }
 
   .navBar.navBar-desktop .navBar-right #block_faAddressCard:hover #popup_faAddressCard {
     position: absolute;
+    top: 100%;
     left: 10%;
   }
 }
@@ -141,13 +142,14 @@
 
   .navBar.navBar-desktop .navBar-right #block_faAddressCard #popup_faAddressCard {
     position: absolute;
-    top: 100%;
+    top: -240%;
     left: -190%;
-    transition: left 2s;
+    transition: left 2s, top 2s;
   }
 
   .navBar.navBar-desktop .navBar-right #block_faAddressCard:hover #popup_faAddressCard {
     position: absolute;
+    top: 100%;
     left: 10%;
   }
 }
