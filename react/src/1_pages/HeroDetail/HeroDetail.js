@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import './HeroDetail.css';
 import { Button } from 'reactstrap';
+import ModalsNestedView from '../../2_components/ModalsNested/ModalsNestedView';
 
 class HeroDetail extends React.Component  {
 	constructor(props) {
@@ -49,7 +50,8 @@ class HeroDetail extends React.Component  {
 						  </label>
 						</div>
 						<div>
-							<Button id='button_save' color='primary' onClick={this.save}>save</Button>
+							{/*<Button id='button_save' color='primary'>save</Button>*/}
+							<ModalsNestedView buttonLabel='Save' className='modalNested' id_button='button_save' save={() => this.save()} />
 							<Button id='button_goBack' color='primary' onClick={this.goBack}>go back</Button>
 						</div>
 					</Fragment>
