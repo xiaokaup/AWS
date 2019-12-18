@@ -13,7 +13,7 @@
 body {
 	background-color: #fcf3de;
   position: relative;
-  padding-top: 110px;
+  /*padding-top: 110px;*/
   padding-bottom: 130px;
   overflow-x: hidden;
 }
