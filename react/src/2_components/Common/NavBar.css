@@ -176,7 +176,7 @@
   .navBar.navBar-desktop .navBar-right #block_faAddressCard #popup_faAddressCard {
     position: absolute;
     top: -240%;
-    left: -210%;
+    left: -250%;
     transition: left 2s, top 2s;
   }
 
