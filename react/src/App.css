@@ -12,6 +12,9 @@
 
 body {
 	background-color: #fcf3de;
+  position: relative;
+  padding-top: 110px;
+  padding-bottom: 130px;
 }
 
 #main {
@@ -38,6 +41,7 @@ body {
 }
 
 #content {
-  min-height: 500px;
+  min-height: 1000px;
   /*padding: 2px*/
+
 }
