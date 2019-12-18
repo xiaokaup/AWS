@@ -1,4 +1,11 @@
 
+.navBar {
+  position: absolute;
+  width: 100%;
+  height: 110px;
+  top: 0px;
+}
+
 .navBar.navBar-desktop {
   background-color: #79d480;
   max-width: 100%;
@@ -10,6 +17,7 @@
     height: 110px;
     transition: width 2s;}
   .navBar.navBar-desktop .navs {
+    background-color: #79d480;
     text-align: center}
     .navBar.navBar-desktop .navs a {
       display: inline-block;
@@ -27,19 +35,76 @@
       text-decoration: none;
     width: 100%;}
   .navBar.navBar-desktop .navBar-right {
+    position: relative;
     background-color: white;
     height: 110px;
     text-align: center;
     line-height: 110px;
     font-size: 2em;
-    color: #333333;
+    color: #333333;}
+  @keyframes fade-out {  
+      0% {opacity: 1;}
+      40% {opacity: 0;}  
+      100% {opacity: 0;}
+  }  
+  @-webkit-keyframes fade-out {/*针对webkit内核*/  
+      0% {opacity: 1;}  
+      40% {opacity: 0;}  
+      100% {opacity: 0;}  
+  }   
+  .navBar.navBar-desktop .navBar-right #popup_faAddressCard {
+    position: absolute;
+    top: -240%;
+    padding: 20px;
+    box-shadow: 1px 1px 2px #d2d2d2;
+    background-color: #79d480;
+    color: #161717;
+    width: 300px;
+    font-size: .5em;
+    line-height: normal;
+    text-align: left;
+    font-weight: 500;
+    transition: top 2s;
+    animation: fade-out;/*动画名称*/  
+    animation-duration: 1.5s;/*动画持续时间*/  
+    -webkit-animation:fade-out 1.5s;/*针对webkit内核*/  
   }
+  @keyframes fade-in {  
+      0% {opacity: 0;}
+      40% {opacity: 0;}  
+      100% {opacity: 1;}
+  }  
+  @-webkit-keyframes fade-in {/*针对webkit内核*/  
+      0% {opacity: 0;}  
+      40% {opacity: 0;}  
+      100% {opacity: 1;}  
+  }   
+  .navBar.navBar-desktop .navBar-right #block_faAddressCard:hover #popup_faAddressCard{
+    animation: fade-in;/*动画名称*/  
+    animation-duration: 1.5s;/*动画持续时间*/  
+    -webkit-animation:fade-in 1.5s;/*针对webkit内核*/  
+    top: 100%;
+    padding: 20px;
+    box-shadow: 1px 1px 2px #d2d2d2;
+    background-color: #79d480;
+    color: #161717;
+    width: 300px;
+    font-size: .5em;
+    line-height: normal;
+    text-align: left;
+    font-weight: 500;
+  }
+/*Large devices (desktops, less than 1200px)*/
+@media (max-width: 1199.98px) {}
 
-/*Extra small devices (portrait phones, less than 576px)*/
-@media (max-width: 575.98px) {}
+/*Medium devices (tablets, less than 992px)*/
+@media (max-width: 991.98px) {}
 
 /*Small devices (landscape phones, less than 768px)*/
 @media (max-width: 767.98px) {
+  body {
+    padding-top: 290px;
+  }
   .navBar.navBar-desktop .logo img {
     width: 110px;
   }
@@ -54,8 +119,10 @@
     }
 }
 
-/*Medium devices (tablets, less than 992px)*/
-@media (max-width: 991.98px) {}
-
-/*Large devices (desktops, less than 1200px)*/
-@media (max-width: 1199.98px) {}
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+  body {
+    /*background-color: blue;*/
+    padding-top: 410px;
+  }
+}
