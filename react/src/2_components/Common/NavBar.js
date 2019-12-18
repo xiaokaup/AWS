@@ -21,7 +21,17 @@ const NavBar = () => (
     </Col>
     <Col sm={12} md={4}>
       <Row className="navBar-right">
-        <Col><FontAwesomeIcon icon={faAddressCard} color="green" /></Col>
+        <Col id="block_faAddressCard">
+          <FontAwesomeIcon icon={faAddressCard} color="green" />
+          <div id="popup_faAddressCard">
+            <p>Name: <span>Jiean Yang</span></p>
+            <p>Nationality: <span>chinese</span></p>
+            <p>School: <span>ESIGELEC</span></p>
+            <p>Diploma: <span>Finance and IT engineer</span></p>
+            <p>Job: <span>Full stack developer</span></p>
+            <p>Address: <span>17 rue Antoine Courbarien</span></p>
+          </div>
+        </Col>
         <Col><FontAwesomeIcon icon={faCoffee} color="green" /></Col>
         <Col><FontAwesomeIcon icon={faAt} color="green" /></Col>
       </Row>

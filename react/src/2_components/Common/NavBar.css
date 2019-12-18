@@ -35,14 +35,65 @@
       text-decoration: none;
     width: 100%;}
   .navBar.navBar-desktop .navBar-right {
+    position: relative;
     background-color: white;
     height: 110px;
     text-align: center;
     line-height: 110px;
     font-size: 2em;
-    color: #333333;
+    color: #333333;}
+  @keyframes fade-out {  
+      0% {opacity: 1;}
+      40% {opacity: 0;}  
+      100% {opacity: 0;}
+  }  
+  @-webkit-keyframes fade-out {/*针对webkit内核*/  
+      0% {opacity: 1;}  
+      40% {opacity: 0;}  
+      100% {opacity: 0;}  
+  }   
+  .navBar.navBar-desktop .navBar-right #popup_faAddressCard {
+    position: absolute;
+    top: -240%;
+    padding: 20px;
+    box-shadow: 1px 1px 2px #d2d2d2;
+    background-color: #79d480;
+    color: #161717;
+    width: 300px;
+    font-size: .5em;
+    line-height: normal;
+    text-align: left;
+    font-weight: 500;
+    transition: top 2s;
+    animation: fade-out;/*动画名称*/  
+    animation-duration: 1.5s;/*动画持续时间*/  
+    -webkit-animation:fade-out 1.5s;/*针对webkit内核*/  
   }
-
+  @keyframes fade-in {  
+      0% {opacity: 0;}
+      40% {opacity: 0;}  
+      100% {opacity: 1;}
+  }  
+  @-webkit-keyframes fade-in {/*针对webkit内核*/  
+      0% {opacity: 0;}  
+      40% {opacity: 0;}  
+      100% {opacity: 1;}  
+  }   
+  .navBar.navBar-desktop .navBar-right #block_faAddressCard:hover #popup_faAddressCard{
+    animation: fade-in;/*动画名称*/  
+    animation-duration: 1.5s;/*动画持续时间*/  
+    -webkit-animation:fade-in 1.5s;/*针对webkit内核*/  
+    top: 100%;
+    padding: 20px;
+    box-shadow: 1px 1px 2px #d2d2d2;
+    background-color: #79d480;
+    color: #161717;
+    width: 300px;
+    font-size: .5em;
+    line-height: normal;
+    text-align: left;
+    font-weight: 500;
+  }
 /*Large devices (desktops, less than 1200px)*/
 @media (max-width: 1199.98px) {}
 
