@@ -43,6 +43,9 @@
     line-height: 110px;
     font-size: 2em;
     color: #333333;}
+    .navBar.navBar-desktop .navBar-right #block_faAddressCard {
+      cursor: default;
+    }
   @keyframes fade-out {  
       0% {opacity: 1;}
       40% {opacity: 0;}  
