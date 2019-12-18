@@ -1,7 +1,7 @@
 
 #messages {
   position: absolute;
-  top: 110px;
+  top: 0;
 }
 
 #messages h3 {
@@ -43,7 +43,7 @@
 /*Small devices (landscape phones, less than 768px)*/
 @media (max-width: 767.98px) {
   #messages {
-    top: 290px;
+    /*top: 290px;*/
   }
 }
 
@@ -51,6 +51,6 @@
 @media (max-width: 575.98px) {
   #messages {
     /*background-color: blue;*/
-    top: 410px;
+    /*top: 410px;*/
   }
 }
