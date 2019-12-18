@@ -3,7 +3,7 @@ import './MessagesLog.css'
 
 
 const MessageLogView = props => {
-	return props.messages.map(element => <div>{element}</div>)
+	return props.messages.map((element,index) => <div key={index}>{element}</div>)
 }
 
 const MessagesLogView = props => {
@@ -14,7 +14,7 @@ const MessagesLogView = props => {
 			&&
 			<div id="messages">
 				<h3>Messages</h3>
-				<button class="clear" onClick={props.clearMessages}>clear</button>
+				<button className="clear" onClick={props.clearMessages}>clear</button>
 				<MessageLogView messages={props.messages} />
 			</div>
 		}
