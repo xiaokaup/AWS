@@ -12,6 +12,9 @@ const NavBar = () => (
       </div>
     </Col>
     <Col sm={12} md={7}>
+      <div id="block_mobile_menu">
+        <span><div className="menu-icon"></div></span>
+      </div>
       <Row className="navs">
         <Col sm={6} md={3}><a href="/">home</a></Col>
         <Col sm={6} md={3}><a href="/reduxApp">ReduxApp</a></Col>
