@@ -78,6 +78,7 @@
   .navBar.navBar-desktop .navBar-right #block_faAddressCard #popup_faAddressCard {
     position: absolute;
     top: -240%;
+    left: -100%;
     padding: 20px;
     box-shadow: 1px 1px 2px #d2d2d2;
     background-color: #79d480;
@@ -108,6 +109,7 @@
     animation-duration: 1.5s;/*动画持续时间*/  
     -webkit-animation:fade-in 1.5s;/*针对webkit内核*/  
     top: 100%;
+    left: -100%;
     padding: 20px;
     box-shadow: 1px 1px 2px #d2d2d2;
     background-color: #79d480;

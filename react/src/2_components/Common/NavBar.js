@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Row, Col, Collapse } from 'reactstrap'
+import { Row, Col, Collapse, Tooltip, UncontrolledPopover, PopoverHeader, PopoverBody } from 'reactstrap'
 import './NavBar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee, faAddressCard, faAt } from '@fortawesome/free-solid-svg-icons'
@@ -8,6 +8,9 @@ import { faCoffee, faAddressCard, faAt } from '@fortawesome/free-solid-svg-icons
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(true);
+  const [tooltipOpen, setTooltipOpen] = useState(false);
+
+  const toggle_tooltip = () => setTooltipOpen(!tooltipOpen);
 
   return (
     <Row className="navBar navBar-desktop">
@@ -43,8 +46,21 @@ const NavBar = () => {
               <p>Address: <span>17 rue Antoine Courbarien</span></p>
             </div>
           </Col>
-          <Col><FontAwesomeIcon icon={faCoffee} color="green" /></Col>
-          <Col><FontAwesomeIcon icon={faAt} color="green" /></Col>
+          <Col>
+            <span id="PopoverLegacy" style={{cursor: 'pointer'}}>
+              <FontAwesomeIcon icon={faCoffee} color="green" />
+            </span>
+            <UncontrolledPopover trigger="legacy" placement="bottom" target="PopoverLegacy">
+              <PopoverHeader>Coffe</PopoverHeader>
+                <PopoverBody>Coffee is life!<br/>Give energy to tired people.</PopoverBody>
+            </UncontrolledPopover>
+          </Col>
+          <Col>
+            <span href="#" id="DisabledAutoHideExample"><FontAwesomeIcon icon={faAt} color="green" /></span>
+            <Tooltip placement="top" isOpen={tooltipOpen} autohide={false} target="DisabledAutoHideExample" toggle={toggle_tooltip}>
+              jiean.yang8534@gmail.com
+            </Tooltip>
+        </Col>
         </Row>
       </Col>
     </Row>
