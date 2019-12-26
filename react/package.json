@@ -20,8 +20,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "dist": "webpack-dev-server --open --config ./webpack.common.conf.js",
+    "build": "webpack --config ./config/webpack.prod.conf.js",
+    "dist": "webpack-dev-server --open --config ./config/webpack.dev.conf.js",
     "test": "jest",
     "eject": "react-scripts eject",
     "stop": "taskkill -F -IM node.exe"
@@ -41,10 +41,15 @@
     "@babel/preset-react": "^7.7.4",
     "babel-jest": "^23.6.0",
     "babel-loader": "8.0.4",
+    "babel-polyfill": "^6.26.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.4.0",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^23.6.0",
+    "style-loader": "^1.1.2",
     "webpack": "4.19.1",
-    "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "3.1.9"
+    "webpack-cli": "^2.1.3",
+    "webpack-dev-server": "3.1.9",
+    "webpack-merge": "^4.2.2"
   }
 }
