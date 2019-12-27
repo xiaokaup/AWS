@@ -77,22 +77,21 @@
   }   
   .navBar.navBar-desktop .navBar-right #block_faAddressCard #popup_faAddressCard {
     position: absolute;
-    top: -240%;
-    left: -100%;
-    padding: 20px;
+    height: 0;
     box-shadow: 1px 1px 2px #d2d2d2;
     background-color: #79d480;
     color: #161717;
-    width: 300px;
     font-size: .5em;
     line-height: normal;
     text-align: left;
     font-weight: 500;
     z-index: 1;
-    transition: top 2s;
-    animation: fade-out;/*动画名称*/  
-    animation-duration: 1.5s;/*动画持续时间*/  
-    -webkit-animation:fade-out 1.5s;/*针对webkit内核*/  
+    transition: height 2s ease;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .navBar.navBar-desktop .navBar-right #block_faAddressCard #popup_faAddressCard > div {
+    padding: 20px;
   }
   @keyframes fade-in {  
       0% {opacity: 0;}
@@ -104,17 +103,11 @@
       40% {opacity: 0;}  
       100% {opacity: 1;}  
   }   
-  .navBar.navBar-desktop .navBar-right #block_faAddressCard:hover #popup_faAddressCard{
-    animation: fade-in;/*动画名称*/  
-    animation-duration: 1.5s;/*动画持续时间*/  
-    -webkit-animation:fade-in 1.5s;/*针对webkit内核*/  
-    top: 100%;
-    left: -100%;
-    padding: 20px;
+  .navBar.navBar-desktop .navBar-right #block_faAddressCard:hover #popup_faAddressCard {
+    height: 250px;
     box-shadow: 1px 1px 2px #d2d2d2;
     background-color: #79d480;
     color: #161717;
-    width: 300px;
     font-size: .5em;
     line-height: normal;
     text-align: left;
