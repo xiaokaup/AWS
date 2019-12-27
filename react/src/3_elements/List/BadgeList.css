@@ -23,12 +23,14 @@
   padding: .3em 0;
   height: 1.6em;
   border-radius: 4px;
+  left: 0;
+  transition: left .25s ease;
 }
 
 .badgeList li:hover {
   color: #607D8B;
   background-color: #DDD;
-  left: .1em;
+  left: .4em;
 }
 
 .badgeList a {
@@ -81,7 +83,7 @@
 .badgeList button.delete {
   position: relative;
   left: 194px;
-  top: -35px;
+  top: -38px;
   background-color: gray !important;
   color: white;
 }
