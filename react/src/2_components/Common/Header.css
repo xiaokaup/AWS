@@ -1,5 +1,4 @@
 
-
 .header.jumbotron {
 	/*background-color: #8829d6;*/
 	border-radius: 0;
@@ -10,8 +9,45 @@
 	text-align: center;
 	color: white;
 	height: 500px;
-	display: block;
 	width: 100%;}
-	.header.jumbotron p {
-		margin-top: 20%;
+	.header.jumbotron h1 {
+		display: inline-block;
 	}
+	.header.jumbotron > div {
+		margin-top: 20%;}
+		.header.jumbotron > div > p {
+			display: inline-block;
+			animation: fadein 4s ease 2s, delay-opacity 2s;
+		}
+
+
+.typing {
+  width: 6em; 
+  height: 1.4em;
+  border-right: 1px solid transparent;
+  animation: typing 1.6s steps(12, end), blink-caret 1s step-end infinite;
+  word-break: break-all;
+  /*white-space: nowrap;*/
+  overflow: hidden;
+}
+
+/* 打印效果 */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 6em; }
+}
+/* 光标闪啊闪 */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: currentColor; }
+}
+
+@keyframes fadein {
+	from { opacity: 0; }
+	to 	 { opacity: 1; }
+}
+
+@keyframes delay-opacity {
+	from { opacity: 0; }
+	to   { opacity: 0; }
+}

@@ -7,8 +7,10 @@ const Header = () => (
 	<Fragment>
 		<Row>
 			<Jumbotron className="header">
-		    <h1 className="display-3">Hello, world!</h1>
-		    <p className="lead">The Big Bang</p>
+		    <h1 className="display-3 typing">Hello, world!</h1>
+		    <div>
+		    	<p className="lead">The Big Bang</p>
+		    </div>
 		    {/*<hr className="my-2" />*/}
 		    {/*<p>It uses utility classes for typography and spacing to space content out within the larger container.</p>*/}
 		  {/*  <p className="lead">
