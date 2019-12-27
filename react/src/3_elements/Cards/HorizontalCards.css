@@ -40,11 +40,15 @@
   min-width: 120px;
   background-color: #3f525c;
   border-radius: 2px;
+  transition: transform 0.25s ease;
 }
 .horizontalCards .module:hover {
-  background-color: #eee;
+  /*background-color: #eee;*/
   cursor: pointer;
-  color: #607d8b;
+  /*color: #607d8b;*/
+  transform: scale(1.2,1.2);
+  /*border:1px solid white;*/
+  box-shadow: 0 0 10px #0000ff;
 }
 
 .horizontalCards .module h4 {
@@ -103,3 +107,5 @@
     line-height: 60px;
   }
 }
+
+
