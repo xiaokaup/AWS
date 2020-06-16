@@ -1,0 +1,88 @@
+@import "./common.scss";
+
+// //
+// === disabled===
+// //
+.container_all_input_disabled {
+	input:disabled {
+		background-color: #c2cfd6;
+		color: #495057;
+	}
+}
+
+// //
+// === width setting===
+// //
+.container_all_div_width_100 {
+	div {
+		width: 100%;
+	}
+}
+
+.container_all_input_width_100 {
+	input {
+		width: 100%;
+	}
+}
+
+.container_all_input_text_width_100 {
+	input[type=text] {
+		width: 100%;
+	}
+}
+
+.container_all_select_width_100 {
+	select {
+		width: 100%;
+	}
+}
+
+.containter_all_textarea_width_100 {
+	textarea {
+		width: 100%;
+	}
+}
+
+.container_all_img_width_100 {
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+// //
+// === border radius setting===
+// //
+
+.container_all_input_border_radius_25 {
+	input {
+		@extend .border_radius_25;
+		@extend .border_default;
+	}
+}
+
+.container_all_select_border_radius_25 {
+	select {
+		@extend .border_radius_25;
+		@extend .border_default;
+	}
+}
+
+.container_all_textarea_border_radius_25 {
+	textarea {
+		@extend .border_radius_25;
+		@extend .border_default;
+	}
+}
+
+// //
+// === wrap setting===
+// //
+.container_all_label_white_space_nowrap {
+	label {
+		white-space: nowrap;
+	}
+}
+
+
+

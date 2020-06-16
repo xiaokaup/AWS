@@ -1,0 +1,25 @@
+
+directive-img-icon .img_icon {
+	display: inline-block;
+	position: relative;
+
+	img {
+		width: 100%;
+	}
+
+	.block_icon {
+		position: absolute;
+		top: 0;
+		right: 0;
+		
+		.icon {
+			padding: 0.25rem;
+			background-color: white;
+			color: #6c757d;
+			border-top: 1px solid rgba(0,0,0, 0.5);
+			border-right: 1px solid rgba(0,0,0, 0.5);
+			
+			cursor: pointer;
+		}
+	}
+}

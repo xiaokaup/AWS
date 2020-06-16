@@ -1,0 +1,50 @@
+@import "../4.base/colors.scss";
+
+.badge {
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+}
+
+@mixin badge-color($text-color: $text-color, $background-color: black) {
+    color: $text-color;
+    background-color: $background-color;
+}
+
+.badge-primary {
+    @include badge-color($text-color,$color-primary);
+}
+
+.badge-secondary {
+    @include badge-color($text-color,$color-secondary);
+}
+
+.badge-success {
+    @include badge-color($text-color,$color-success);
+}
+
+.badge-danger {
+    @include badge-color($text-color,$color-danger);
+}
+
+.badge-warning {
+    @include badge-color($text-color-dark,$color-warning);
+}
+
+.badge-info {
+    @include badge-color($text-color,$color-info);
+}
+
+.badge-light {
+    @include badge-color($text-color-dark,$color-light);
+}
+
+.badge-dark {
+    @include badge-color($text-color,$color-dark);
+}

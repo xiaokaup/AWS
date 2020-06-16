@@ -8,3 +8,9 @@ __pycache__
 
 # postgres data
 /postgres/data
+
+
+# common
+## styles Sass
+/common/style/.sass-cache
+/common/style/css
