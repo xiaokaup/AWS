@@ -1,0 +1,17 @@
+@import "./icon_customized.scss";
+
+directive-icon-small-loader .small_loader {
+    display: none;
+    
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #151c1f;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    animation: spin 2s linear infinite;
+    margin: 0;
+
+    &.show {
+        display: inline-block;
+    }
+}

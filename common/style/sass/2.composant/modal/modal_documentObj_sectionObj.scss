@@ -1,0 +1,134 @@
+@import "../../4.base/base_layout.scss";
+@import "../../4.base/common.scss";
+@import "../../4.base/children.scss";
+
+#modal_documentObj_sectionObj .modal-content {
+	.container_modal {
+		position: relative;
+
+		.block_button_close button {
+	    @include position_absolute_setting(20px, 25px);
+		}
+
+		.form {
+			border-radius: $border_radius_30 $border_radius_30 0 0;
+
+			.block_state {
+				padding: 20px 30px 10px 30px;
+			}
+
+			.block_groups, .block_geos {
+				@extend .padding_horizontal_20;
+				padding-top: 20px;
+				
+				& > div {
+					@extend .border_default;
+					border-radius: .25rem;
+					
+					@media (max-width: 999px)  {
+						flex-direction: column;
+					}
+
+					.row_1, .row_2 {
+						h6 {
+							margin-bottom: 0;
+						}
+						
+						.show_tags_group, .show_tags_geo {
+							margin: .5rem 0;
+						}
+						
+						select {
+							width: 49%;
+						}
+					}
+				}
+			}
+
+			.block_info {
+				padding: 30px 20px 0 20px;
+
+				& > div {
+					label {
+						width: 60px;
+					}
+				}
+			}
+
+			.block_ids_and_search {
+				display: flex;
+				margin: 20px -1px -1px -1px;
+
+				@media (max-width: 999px)  {
+					flex-direction: column;
+				}
+				
+				.block_ids {
+					flex: 1 1 60%;
+
+					.list_ids {
+						padding-left: 40px;
+
+						& > div {
+							input {
+								width: 300px;
+							}
+
+							button {
+								margin-left: 5px;
+							}
+						}
+					}
+				}
+
+				.block_search_id {
+					flex: 1 1 40%;
+					padding: 30px 15px;
+					border-left: 1px solid #ced4da;
+
+					.block_oneSearch {
+						& > div:nth-child(2) {
+							display: flex;
+
+							i {
+								margin: auto;
+								padding-left: 5px;
+							}
+						}
+					}
+				}
+			}
+			
+			.block_for_seatch_section {
+				padding-top: 20px;
+
+				.block_expedition_gpslat_gpslong {
+					margin-bottom: 30px;
+				}
+
+				.block_searchText_categs_tags_type {
+					select {
+						width: 100%;
+						margin: 0;
+					}
+				}
+
+				.block_except_state_safe_inventory_order {
+					.Safe, .Inventory {
+						display: flex;
+						
+						& > div {
+							margin: auto 10px;
+						}
+
+					}
+				}
+			}
+		}
+		
+		.modal-footer {
+			border-radius: 0 0 $border_radius_30 $border_radius_30;
+		}
+	}
+
+}

@@ -1,0 +1,96 @@
+@import '../4.base/colors.scss';
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+@mixin btn-color($text-color: $text-color, $background-color: black) {
+    color: $text-color;
+    background-color: $background-color;
+    border-color: $background-color;
+}
+
+.btn-primary {
+    @include btn-color($text-color,$color-primary);
+}
+
+.btn-secondary {
+    @include btn-color($text-color,$color-secondary);
+}
+
+.btn-success {
+    @include btn-color($text-color,$color-success);
+}
+
+.btn-warning {
+    @include btn-color($text-color-dark,$color-warning);
+}
+
+.btn-danger {
+    @include btn-color($text-color,$color-danger);
+}
+
+.btn-info {
+    @include btn-color($text-color,$color-info);
+}
+
+.btn-light {
+    @include btn-color($text-color-dark,$color-light);
+}
+
+.btn-dark {
+    @include btn-color($text-color,$color-dark);
+}
+
+@mixin btn-outline-color($text-border-color: black) {
+    color: $text-border-color;
+    background-color: transparent;
+    background-image: none;
+    border-color: $text-border-color;
+}
+
+.btn-outline-primary {
+    @include btn-outline-color($color-primary);
+}
+
+.btn-outline-secondary {
+    @include btn-outline-color($color-secondary);
+}
+
+.btn-outline-success {
+    @include btn-outline-color($color-success);
+}
+
+.btn-outline-danger {
+    @include btn-outline-color($color-danger);
+}
+
+.btn-outline-warning {
+    @include btn-outline-color($color-warning);
+}
+
+.btn-outline-info {
+    @include btn-outline-color($color-info);
+}
+
+.btn-outline-light {
+    @include btn-outline-color($color-light);
+}
+
+.btn-outline-dark {
+    @include btn-outline-color($color-dark);
+}
