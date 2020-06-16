@@ -1,5 +1,10 @@
 __pycache__
 
 
-# jenkins
-/jenkins_data
+.Ds_Store
+
+# jenkins data
+# /jenkins_data
+
+# postgres data
+/postgres/data
