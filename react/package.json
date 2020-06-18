@@ -39,6 +39,6 @@
     "@babel/preset-env": "^7.7.4",
     "babel-jest": "^23.6.0",
     "jest": "^23.6.0",
-    "webpack": "^4.19.1"
+    "webpack": "^4.43.0"
   }
 }
