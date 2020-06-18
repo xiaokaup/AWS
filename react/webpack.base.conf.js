@@ -31,7 +31,7 @@ module.exports = {
     //使用插件生成Html入口文件
         new HtmlWebpackPlugin({
          //模板文件路径
-            template: "./src/index.html",
+            // template: "./src/index.html",
         //模板文件名
             filename: "index.html",
             minify: {
@@ -47,9 +47,9 @@ module.exports = {
     ],
     resolve: {
         // modules: [path.resolve('node_modules')],//只在当前目录下查找
-        alias: { //别名
-            'bootstrap': 'bootstrap/dist/css/bootstrap.css',
-        },
+        // alias: { //别名
+            // 'bootstrap': 'bootstrap/dist/css/bootstrap.css',
+        // },
         // mainFields: ['style', 'main'],//优先寻找style，
         // mainFiles: [],//入口文件的名字,默认index.js
         // extensions: ['js', 'css', 'json', 'vue']//扩展名顺序
