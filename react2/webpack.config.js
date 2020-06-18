@@ -25,5 +25,9 @@ module.exports = {
       template: "./src/index.html",
       filename: "./index.html"
     })
-  ]
+  ],
+  entry: {
+    js: ["babel-polyfill", './src/index.js'],
+    vendor: ['react']
+  }
 };
