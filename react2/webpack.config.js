@@ -31,3 +31,13 @@ module.exports = {
     vendor: ['react']
   }
 };
+
+const NODE_ENV=process.env.NODE_ENV;
+setTimeout(() => {
+  console.log("\n");
+  console.log("============================================================");
+  console.log("\n");
+  console.log("Environment:" + NODE_ENV);  
+  console.log("\n");
+  console.log("============================================================");
+}, 5000);
