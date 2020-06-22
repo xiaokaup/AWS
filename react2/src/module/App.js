@@ -16,7 +16,7 @@ const App = () => (
   <>
     <Router>
       <Header />
-      <div>
+      <div id="page_content" style={{paddingTop: "170px"}}>
         <Switch>
           <Route path="/about"><h2>About yang</h2></Route>
           <Route path="/contact"><h2>Contact yang</h2></Route>

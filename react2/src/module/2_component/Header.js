@@ -1,6 +1,6 @@
 // src/module/2_component/Header
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faEnvelope, faUserAlt, faAlignLeft } from '@fortawesome/free-solid-svg-icons';
 import { Link } from "react-router-dom";
@@ -8,6 +8,26 @@ import { Link } from "react-router-dom";
 import '../../style/2_component/Header.scss'
 
 export default function Header() {
+	// const [scrolling, setScrolling] = useState(false);
+	const [scrollTop, setScrollTop] = useState(0);
+
+	useEffect(() => {
+    const onScroll = e => {
+      setScrollTop(e.target.documentElement.scrollTop);
+      // setScrolling(e.target.documentElement.scrollTop > scrollTop);
+      if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+		    document.getElementById("navbar").style.padding = "30px 10px";
+		    document.getElementById("logo").style.fontSize = "25px";
+		  } else {
+		    document.getElementById("navbar").style.padding = "60px 10px";
+		    document.getElementById("logo").style.fontSize = "35px";
+		  }
+    };
+    window.addEventListener("scroll", onScroll);
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [scrollTop]);
+
 	return (
 		<>
 			<nav id="navbar">
