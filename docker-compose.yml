@@ -1,5 +1,18 @@
 version: '3'
 services:
+  jenkins:
+    image: jenkinsci/blueocean
+    privileged: true
+    user: root
+    ports:
+      - 8081:8080
+      - 50000:50000
+    container_name: jenkins
+    volumes:
+      - ~/jenkins:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /usr/local/bin/docker:/usr/local/bin/docker
+      
   nginx:
     container_name: nginx
     build:
@@ -26,21 +39,6 @@ services:
       # - angular
       # - flask
       - react
-
-  jenkins:
-    container_name: jenkins
-    build:
-      context: ./jenkins
-      dockerfile: Dockerfile
-    # user: root
-    restart: always
-    # privileged: true
-    ports:
-      - 8080:8080
-      - 50000:50000
-    volumes:
-      - ./jenkins_home:/var/jenkins_home
-      - /var/run/docker.sock:/var/run/docker.sock
 
   react:
     container_name: react

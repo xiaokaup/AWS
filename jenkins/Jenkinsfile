@@ -20,10 +20,10 @@ pipeline {
         echo 'Deploying...'
       }
     }
-    stage('Restart all docker service') {
-      steps {
-        sh './scripts/restart_docker_service.sh'
-      }
-    }
+    // stage('Restart all docker service') {
+    //   steps {
+    //     sh './scripts/restart_docker_service.sh'
+    //   }
+    // }
   }
 }
