@@ -5,14 +5,14 @@ services:
     privileged: true
     user: root
     ports:
-      - 8081:8080
+      - 8080:8080
       - 50000:50000
     container_name: jenkins
     volumes:
-      - ~/jenkins:/var/jenkins_home
+      - jenkins-data:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
-      - /usr/local/bin/docker:/usr/local/bin/docker
-      
+      - ~:/home
+
   nginx:
     container_name: nginx
     build:
@@ -116,3 +116,7 @@ services:
 
   redis:
     image: "redis:alpine"
+
+volumes:
+  jenkins-data:
+    external: false
