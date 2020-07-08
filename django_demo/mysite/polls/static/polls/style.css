@@ -1,0 +1,8 @@
+li a {
+	color: green;
+}
+
+.block_background {
+	background: white url("images/background.gif") no-repeat;
+	height: 288px;
+}
